@@ -16,6 +16,8 @@
 		F65EBE7F2C3EBE9000C0230F /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBE7E2C3EBE9000C0230F /* FirstScreen.swift */; };
 		F65EBE812C3EC0C100C0230F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBE802C3EC0C100C0230F /* OnboardingView.swift */; };
 		F65EBE832C3EC8F500C0230F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65EBE822C3EC8F500C0230F /* Launch Screen.storyboard */; };
+		F65EBED22C40505900C0230F /* Poppins_SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F65EBED12C40505800C0230F /* Poppins_SemiBold.ttf */; };
+		F65EBED42C40546B00C0230F /* Poppins_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F65EBED32C40546B00C0230F /* Poppins_Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		F65EBE7E2C3EBE9000C0230F /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
 		F65EBE802C3EC0C100C0230F /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		F65EBE822C3EC8F500C0230F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F65EBED02C404A8F00C0230F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F65EBED12C40505800C0230F /* Poppins_SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Poppins_SemiBold.ttf; path = ../../../../../Downloads/Poppins/Poppins_SemiBold.ttf; sourceTree = "<group>"; };
+		F65EBED32C40546B00C0230F /* Poppins_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Poppins_Regular.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 		F65EBE612C3EB51A00C0230F /* Banking */ = {
 			isa = PBXGroup;
 			children = (
+				F65EBED02C404A8F00C0230F /* Info.plist */,
 				F65EBE742C3EBBB800C0230F /* Network */,
 				F65EBE732C3EBBAE00C0230F /* Resource */,
 				F65EBE722C3EBBA500C0230F /* Source */,
@@ -80,7 +86,9 @@
 		F65EBE722C3EBBA500C0230F /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F65EBE762C3EBC4400C0230F /* Flows */,
+				F65EBEA22C4000C900C0230F /* App */,
+				F65EBEA32C40010500C0230F /* Components */,
+				F65EBE762C3EBC4400C0230F /* Modules */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -88,7 +96,7 @@
 		F65EBE732C3EBBAE00C0230F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				F65EBE622C3EB51A00C0230F /* BankingApp.swift */,
+				F65EBEA72C40490E00C0230F /* Fonts */,
 				F65EBE682C3EB52800C0230F /* Assets.xcassets */,
 				F65EBE822C3EC8F500C0230F /* Launch Screen.storyboard */,
 			);
@@ -110,15 +118,18 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		F65EBE762C3EBC4400C0230F /* Flows */ = {
+		F65EBE762C3EBC4400C0230F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				F65EBE7A2C3EBCD400C0230F /* Profile */,
-				F65EBE792C3EBCCF00C0230F /* Home */,
-				F65EBE782C3EBCC200C0230F /* Authorization */,
 				F65EBE772C3EBCB400C0230F /* Onboarding */,
+				F65EBE7A2C3EBCD400C0230F /* Profile */,
+				F65EBE782C3EBCC200C0230F /* Authorization */,
+				F65EBE792C3EBCCF00C0230F /* Home */,
+				F65EBEA42C40015B00C0230F /* MyCards */,
+				F65EBEA52C40016D00C0230F /* Statistics */,
+				F65EBEA62C40017600C0230F /* Settings */,
 			);
-			path = Flows;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		F65EBE772C3EBCB400C0230F /* Onboarding */ = {
@@ -160,6 +171,51 @@
 				F65EBE662C3EB51A00C0230F /* Item.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F65EBEA22C4000C900C0230F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F65EBE622C3EB51A00C0230F /* BankingApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F65EBEA32C40010500C0230F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F65EBEA42C40015B00C0230F /* MyCards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyCards;
+			sourceTree = "<group>";
+		};
+		F65EBEA52C40016D00C0230F /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		F65EBEA62C40017600C0230F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F65EBEA72C40490E00C0230F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F65EBED12C40505800C0230F /* Poppins_SemiBold.ttf */,
+				F65EBED32C40546B00C0230F /* Poppins_Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,8 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F65EBE832C3EC8F500C0230F /* Launch Screen.storyboard in Resources */,
+				F65EBED42C40546B00C0230F /* Poppins_Regular.ttf in Resources */,
 				F65EBE6C2C3EB52800C0230F /* Preview Assets.xcassets in Resources */,
 				F65EBE692C3EB52800C0230F /* Assets.xcassets in Resources */,
+				F65EBED22C40505900C0230F /* Poppins_SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +433,8 @@
 				DEVELOPMENT_TEAM = 2XBX55HUH5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Banking/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "\"\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -404,6 +464,8 @@
 				DEVELOPMENT_TEAM = 2XBX55HUH5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Banking/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "\"\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
