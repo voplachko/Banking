@@ -12,14 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            FirstScreen()
-                .tabItem {
-                    Text("Первый экран")
-                }
-            ScreenSecond()
-                .tabItem {
-                    Text("Второй экран")
-                }
+            OnboardingView()
         }
     }
 }

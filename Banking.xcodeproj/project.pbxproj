@@ -18,6 +18,8 @@
 		F65EBE832C3EC8F500C0230F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65EBE822C3EC8F500C0230F /* Launch Screen.storyboard */; };
 		F65EBED22C40505900C0230F /* Poppins_SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F65EBED12C40505800C0230F /* Poppins_SemiBold.ttf */; };
 		F65EBED42C40546B00C0230F /* Poppins_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F65EBED32C40546B00C0230F /* Poppins_Regular.ttf */; };
+		F65EBEDE2C41334900C0230F /* Color + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBEDD2C41334900C0230F /* Color + Ext.swift */; };
+		F65EBEE22C413B0400C0230F /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBEE12C413B0400C0230F /* AuthorizationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		F65EBED02C404A8F00C0230F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F65EBED12C40505800C0230F /* Poppins_SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Poppins_SemiBold.ttf; path = ../../../../../Downloads/Poppins/Poppins_SemiBold.ttf; sourceTree = "<group>"; };
 		F65EBED32C40546B00C0230F /* Poppins_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Poppins_Regular.ttf; sourceTree = "<group>"; };
+		F65EBEDD2C41334900C0230F /* Color + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Ext.swift"; sourceTree = "<group>"; };
+		F65EBEE12C413B0400C0230F /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		F65EBE782C3EBCC200C0230F /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				F65EBEE12C413B0400C0230F /* AuthorizationView.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 		F65EBEA32C40010500C0230F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F65EBEDC2C41330D00C0230F /* Extensions */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -216,6 +222,14 @@
 				F65EBED32C40546B00C0230F /* Poppins_Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F65EBEDC2C41330D00C0230F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F65EBEDD2C41334900C0230F /* Color + Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,10 +307,12 @@
 			files = (
 				F65EBE652C3EB51A00C0230F /* ContentView.swift in Sources */,
 				F65EBE7D2C3EBD8E00C0230F /* ScreenSecond.swift in Sources */,
+				F65EBEDE2C41334900C0230F /* Color + Ext.swift in Sources */,
 				F65EBE672C3EB51A00C0230F /* Item.swift in Sources */,
 				F65EBE812C3EC0C100C0230F /* OnboardingView.swift in Sources */,
 				F65EBE632C3EB51A00C0230F /* BankingApp.swift in Sources */,
 				F65EBE7F2C3EBE9000C0230F /* FirstScreen.swift in Sources */,
+				F65EBEE22C413B0400C0230F /* AuthorizationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +454,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,6 +486,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
