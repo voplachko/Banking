@@ -20,6 +20,11 @@
 		F65EBED42C40546B00C0230F /* Poppins_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F65EBED32C40546B00C0230F /* Poppins_Regular.ttf */; };
 		F65EBEDE2C41334900C0230F /* Color + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBEDD2C41334900C0230F /* Color + Ext.swift */; };
 		F65EBEE22C413B0400C0230F /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBEE12C413B0400C0230F /* AuthorizationView.swift */; };
+		F6C6D1782C426A8F00547CD3 /* SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C6D1772C426A8F00547CD3 /* SafeArea.swift */; };
+		F6C6D17A2C426CFA00547CD3 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6C6D1792C426CFA00547CD3 /* Poppins-Medium.ttf */; };
+		F6C6D17C2C4270EF00547CD3 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C6D17B2C4270EF00547CD3 /* UnderlineTextField.swift */; };
+		F6C6D1852C4282CF00547CD3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C6D1842C4282CF00547CD3 /* ProfileView.swift */; };
+		F6C6D1872C428AC400547CD3 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C6D1862C428AC400547CD3 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		F65EBED32C40546B00C0230F /* Poppins_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Poppins_Regular.ttf; sourceTree = "<group>"; };
 		F65EBEDD2C41334900C0230F /* Color + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Ext.swift"; sourceTree = "<group>"; };
 		F65EBEE12C413B0400C0230F /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		F6C6D1772C426A8F00547CD3 /* SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeArea.swift; sourceTree = "<group>"; };
+		F6C6D1792C426CFA00547CD3 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../../../../Downloads/Poppins/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		F6C6D17B2C4270EF00547CD3 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
+		F6C6D1842C4282CF00547CD3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F6C6D1862C428AC400547CD3 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				F65EBEE12C413B0400C0230F /* AuthorizationView.swift */,
+				F6C6D1862C428AC400547CD3 /* RegisterView.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -166,6 +177,7 @@
 		F65EBE7A2C3EBCD400C0230F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				F6C6D1842C4282CF00547CD3 /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -220,6 +232,7 @@
 			children = (
 				F65EBED12C40505800C0230F /* Poppins_SemiBold.ttf */,
 				F65EBED32C40546B00C0230F /* Poppins_Regular.ttf */,
+				F6C6D1792C426CFA00547CD3 /* Poppins-Medium.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -228,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				F65EBEDD2C41334900C0230F /* Color + Ext.swift */,
+				F6C6D1772C426A8F00547CD3 /* SafeArea.swift */,
+				F6C6D17B2C4270EF00547CD3 /* UnderlineTextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -293,6 +308,7 @@
 				F65EBE832C3EC8F500C0230F /* Launch Screen.storyboard in Resources */,
 				F65EBED42C40546B00C0230F /* Poppins_Regular.ttf in Resources */,
 				F65EBE6C2C3EB52800C0230F /* Preview Assets.xcassets in Resources */,
+				F6C6D17A2C426CFA00547CD3 /* Poppins-Medium.ttf in Resources */,
 				F65EBE692C3EB52800C0230F /* Assets.xcassets in Resources */,
 				F65EBED22C40505900C0230F /* Poppins_SemiBold.ttf in Resources */,
 			);
@@ -311,7 +327,11 @@
 				F65EBE672C3EB51A00C0230F /* Item.swift in Sources */,
 				F65EBE812C3EC0C100C0230F /* OnboardingView.swift in Sources */,
 				F65EBE632C3EB51A00C0230F /* BankingApp.swift in Sources */,
+				F6C6D17C2C4270EF00547CD3 /* UnderlineTextField.swift in Sources */,
 				F65EBE7F2C3EBE9000C0230F /* FirstScreen.swift in Sources */,
+				F6C6D1782C426A8F00547CD3 /* SafeArea.swift in Sources */,
+				F6C6D1872C428AC400547CD3 /* RegisterView.swift in Sources */,
+				F6C6D1852C4282CF00547CD3 /* ProfileView.swift in Sources */,
 				F65EBEE22C413B0400C0230F /* AuthorizationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

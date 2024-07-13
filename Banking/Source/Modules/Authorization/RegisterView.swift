@@ -7,16 +7,19 @@
 
 import SwiftUI
 
-struct AuthorizationView: View {
+struct RegisterView: View {
     @State var userEmail: String = ""
     @State var userPassword: String = ""
+    @State var userName: String = ""
+    @State var userNumber: String = ""
+    
     @State private var isPasswordVisible: Bool = false
     @State private var showAlert: Bool = false
-    @State private var isShowProfileView: Bool = false
-    @State private var isShowRegisterView: Bool = false
     
     private let emailIconName = "Icon_Email"
     private let passwordIconName = "Icon_Password"
+    private let userIconName = "Icon_User"
+    private let phoneIconName = "Icon_Phone"
     
     @Environment(\.dismiss) private var dismiss
     
@@ -37,7 +40,7 @@ struct AuthorizationView: View {
             
             Spacer().frame(height: 53)
             
-            Text("Sign In")
+            Text("Sign Up")
                 .font(.custom("Poppins", size: 32))
                 .fontWeight(.medium)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -47,6 +50,34 @@ struct AuthorizationView: View {
             Spacer().frame(height: 38)
             
             VStack {
+                Text("Full Name")
+                    .font(.custom("Poppins", size: 14))
+                    .fontWeight(.regular)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 20)
+                    .foregroundColor(Color.grayExtra)
+                
+                UnderlineTextFieldView(
+                    text: $userName,
+                    textFieldView: userNameView,
+                    placeholder: "Full Name",
+                    imageName: userIconName)
+                    .padding(.top, 15)
+                
+                Text("Phone Number")
+                    .font(.custom("Poppins", size: 14))
+                    .fontWeight(.regular)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 20)
+                    .foregroundColor(Color.grayExtra)
+                
+                UnderlineTextFieldView(
+                    text: $userNumber,
+                    textFieldView: phoneNumberView,
+                    placeholder: "+",
+                    imageName: phoneIconName)
+                    .padding(.top, 15)
+                
                 Text("Email Address")
                     .font(.custom("Poppins", size: 14))
                     .fontWeight(.regular)
@@ -84,10 +115,10 @@ struct AuthorizationView: View {
             
             Button(action: {
                 withAnimation {
-                    if userEmail.isEmpty || userPassword.isEmpty {
+                    if userEmail.isEmpty || userPassword.isEmpty || userName.isEmpty || userNumber.isEmpty {
                         showAlert = true
                     } else {
-                        isShowProfileView = true
+                        dismiss()
                     }
                 }
                 
@@ -113,15 +144,15 @@ struct AuthorizationView: View {
             Spacer().frame(height: 29)
             
             HStack {
-                Text("I'm a new user.")
+                Text("Already have an account.")
                     .font(.custom("Poppins", size: 14))
                     .fontWeight(.regular)
                     .foregroundColor(Color.grayExtra)
                 
                 Button(action: {
-                    isShowRegisterView = true
+                    dismiss()
                 }) {
-                    Text("Sign Up")
+                    Text("Sign In")
                         .font(.custom("Poppins", size: 14))
                         .fontWeight(.regular)
                     }
@@ -134,16 +165,10 @@ struct AuthorizationView: View {
         .frame(maxWidth: .infinity)
         .background(Color.bankingPrimary)
         .ignoresSafeArea(.all)
-        .fullScreenCover(isPresented: $isShowProfileView) {
-            ProfileView()
-        }
-        .fullScreenCover(isPresented: $isShowRegisterView) {
-            RegisterView()
-        }
     }
 }
 
-extension AuthorizationView {
+extension RegisterView {
     
     private var textView: some View {
         TextField("", text: $userEmail)
@@ -151,6 +176,22 @@ extension AuthorizationView {
             .fontWeight(.regular)
             .foregroundColor(.white)
             .keyboardType(.emailAddress)
+            .autocapitalization(.none)
+    }
+    
+    private var userNameView: some View {
+        TextField("", text: $userName)
+            .font(.custom("Poppins", size: 14))
+            .fontWeight(.regular)
+            .foregroundColor(.white)
+            .autocapitalization(.none)
+    }
+    
+    private var phoneNumberView: some View {
+        TextField("", text: $userNumber)
+            .font(.custom("Poppins", size: 14))
+            .fontWeight(.regular)
+            .foregroundColor(.white)
             .autocapitalization(.none)
     }
     
