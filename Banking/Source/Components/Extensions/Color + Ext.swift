@@ -15,4 +15,7 @@ extension Color {
     
     static var grayExtra =
     Color(UIColor(red: 162 / 255, green: 162 / 255, blue: 167 / 255, alpha: 1.0))
+    
+    static var grayProfile =
+    Color(UIColor(red: 126 / 255, green: 132 / 255, blue: 141 / 255, alpha: 1.0))
 }

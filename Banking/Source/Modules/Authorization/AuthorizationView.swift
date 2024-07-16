@@ -27,8 +27,10 @@ struct AuthorizationView: View {
                 Button(action:  {
                     dismiss()
                 }) {
-                    Image(systemName: "chevron.left")
-                        .padding()
+                    Image("Back_Icon")
+                        .resizable()
+                        .frame(width: 42, height: 42)
+                        .padding(.leading, 20)
                 }
                 Spacer()
             }

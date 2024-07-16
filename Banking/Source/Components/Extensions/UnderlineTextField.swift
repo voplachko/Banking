@@ -67,8 +67,8 @@ extension UnderlineTextFieldView {
     private var underlineView: some View {
         Rectangle().frame(height: 0.5)
             .foregroundColor(.white)
-            .padding(.leading, 16)
-            .padding(.trailing, 16)
+            .padding(.leading, 20)
+            .padding(.trailing, 20)
             .opacity(0.5)
     }
 }
