@@ -20,11 +20,16 @@
 		F65EBED42C40546B00C0230F /* Poppins_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F65EBED32C40546B00C0230F /* Poppins_Regular.ttf */; };
 		F65EBEDE2C41334900C0230F /* Color + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBEDD2C41334900C0230F /* Color + Ext.swift */; };
 		F65EBEE22C413B0400C0230F /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBEE12C413B0400C0230F /* AuthorizationView.swift */; };
+		F6B427ED2C47E017001DE1E9 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B427EC2C47E017001DE1E9 /* RegistrationViewModel.swift */; };
+		F6B427F02C47EC59001DE1E9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B427EF2C47EC59001DE1E9 /* NetworkManager.swift */; };
+		F6B427F22C47F28B001DE1E9 /* RegistrationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B427F12C47F28B001DE1E9 /* RegistrationWorker.swift */; };
+		F6B427F62C48620D001DE1E9 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B427F52C48620D001DE1E9 /* UserAccount.swift */; };
 		F6C6D1782C426A8F00547CD3 /* SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C6D1772C426A8F00547CD3 /* SafeArea.swift */; };
 		F6C6D17A2C426CFA00547CD3 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6C6D1792C426CFA00547CD3 /* Poppins-Medium.ttf */; };
 		F6C6D17C2C4270EF00547CD3 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C6D17B2C4270EF00547CD3 /* UnderlineTextField.swift */; };
 		F6C6D1852C4282CF00547CD3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C6D1842C4282CF00547CD3 /* ProfileView.swift */; };
 		F6C6D1872C428AC400547CD3 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C6D1862C428AC400547CD3 /* RegisterView.swift */; };
+		F6EC92972C4A4CB90072890F /* AuthWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92962C4A4CB90072890F /* AuthWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,11 +48,16 @@
 		F65EBED32C40546B00C0230F /* Poppins_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Poppins_Regular.ttf; sourceTree = "<group>"; };
 		F65EBEDD2C41334900C0230F /* Color + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Ext.swift"; sourceTree = "<group>"; };
 		F65EBEE12C413B0400C0230F /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		F6B427EC2C47E017001DE1E9 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		F6B427EF2C47EC59001DE1E9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F6B427F12C47F28B001DE1E9 /* RegistrationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationWorker.swift; sourceTree = "<group>"; };
+		F6B427F52C48620D001DE1E9 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		F6C6D1772C426A8F00547CD3 /* SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeArea.swift; sourceTree = "<group>"; };
 		F6C6D1792C426CFA00547CD3 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../../../../Downloads/Poppins/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		F6C6D17B2C4270EF00547CD3 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		F6C6D1842C4282CF00547CD3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F6C6D1862C428AC400547CD3 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		F6EC92962C4A4CB90072890F /* AuthWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,8 @@
 		F65EBE742C3EBBB800C0230F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F6B427EF2C47EC59001DE1E9 /* NetworkManager.swift */,
+				F6B427EE2C47EBCA001DE1E9 /* Workers */,
 				F65EBE752C3EBC0600C0230F /* Models */,
 			);
 			path = Network;
@@ -128,6 +140,7 @@
 		F65EBE752C3EBC0600C0230F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F6B427F52C48620D001DE1E9 /* UserAccount.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,8 +170,8 @@
 		F65EBE782C3EBCC200C0230F /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				F65EBEE12C413B0400C0230F /* AuthorizationView.swift */,
-				F6C6D1862C428AC400547CD3 /* RegisterView.swift */,
+				F6B427F42C486103001DE1E9 /* Auth */,
+				F6B427F32C4860F8001DE1E9 /* Registration */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -247,6 +260,32 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		F6B427EE2C47EBCA001DE1E9 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				F6B427F12C47F28B001DE1E9 /* RegistrationWorker.swift */,
+				F6EC92962C4A4CB90072890F /* AuthWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		F6B427F32C4860F8001DE1E9 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				F6C6D1862C428AC400547CD3 /* RegisterView.swift */,
+				F6B427EC2C47E017001DE1E9 /* RegistrationViewModel.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		F6B427F42C486103001DE1E9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				F65EBEE12C413B0400C0230F /* AuthorizationView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,12 +363,17 @@
 				F65EBE652C3EB51A00C0230F /* ContentView.swift in Sources */,
 				F65EBE7D2C3EBD8E00C0230F /* ScreenSecond.swift in Sources */,
 				F65EBEDE2C41334900C0230F /* Color + Ext.swift in Sources */,
+				F6EC92972C4A4CB90072890F /* AuthWorker.swift in Sources */,
 				F65EBE672C3EB51A00C0230F /* Item.swift in Sources */,
 				F65EBE812C3EC0C100C0230F /* OnboardingView.swift in Sources */,
+				F6B427F22C47F28B001DE1E9 /* RegistrationWorker.swift in Sources */,
 				F65EBE632C3EB51A00C0230F /* BankingApp.swift in Sources */,
 				F6C6D17C2C4270EF00547CD3 /* UnderlineTextField.swift in Sources */,
+				F6B427F62C48620D001DE1E9 /* UserAccount.swift in Sources */,
 				F65EBE7F2C3EBE9000C0230F /* FirstScreen.swift in Sources */,
 				F6C6D1782C426A8F00547CD3 /* SafeArea.swift in Sources */,
+				F6B427ED2C47E017001DE1E9 /* RegistrationViewModel.swift in Sources */,
+				F6B427F02C47EC59001DE1E9 /* NetworkManager.swift in Sources */,
 				F6C6D1872C428AC400547CD3 /* RegisterView.swift in Sources */,
 				F6C6D1852C4282CF00547CD3 /* ProfileView.swift in Sources */,
 				F65EBEE22C413B0400C0230F /* AuthorizationView.swift in Sources */,

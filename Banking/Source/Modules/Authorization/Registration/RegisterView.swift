@@ -8,13 +8,10 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @State var userEmail: String = ""
-    @State var userPassword: String = ""
-    @State var userName: String = ""
-    @State var userNumber: String = ""
+
+    @StateObject var viewModel: RegistrationViewModel = .init()
     
     @State private var isPasswordVisible: Bool = false
-    @State private var showAlert: Bool = false
     
     @Environment(\.dismiss) private var dismiss
     
@@ -35,7 +32,7 @@ struct RegisterView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.top, safeAreaInsets().top)
             
-            Spacer().frame(height: 53)
+            Spacer().frame(height: 30)
             
             Text("Sign Up")
                 .font(.custom("Poppins", size: 32))
@@ -47,79 +44,86 @@ struct RegisterView: View {
             Spacer().frame(height: 38)
             
             ScrollView {
-                VStack {
-                    Text("Full Name")
-                        .font(.custom("Poppins", size: 14))
-                        .fontWeight(.regular)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 20)
-                        .padding(.top, 21)
-                        .foregroundColor(Color.grayExtra)
+                VStack(spacing: 21) {
+                    VStack {
+                        Text("Full Name")
+                            .font(.custom("Poppins", size: 14))
+                            .fontWeight(.regular)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.horizontal, 20)
+    //                        .padding(.top, 21)
+                            .foregroundColor(Color.grayExtra)
+                        
+                        UnderlineTextFieldView(
+                            text: $viewModel.userName,
+                            textFieldView: userNameView,
+                            placeholder: "Full Name",
+                            imageName: "Icon_User")
+                            .padding(.top, 15)
+                    }
                     
-                    UnderlineTextFieldView(
-                        text: $userName,
-                        textFieldView: userNameView,
-                        placeholder: "Full Name",
-                        imageName: "Icon_User")
+                    VStack {
+                        Text("Phone Number")
+                            .font(.custom("Poppins", size: 14))
+                            .fontWeight(.regular)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.horizontal, 20)
+                        //                        .padding(.top, 21)
+                            .foregroundColor(Color.grayExtra)
+                        
+                        UnderlineTextFieldView(
+                            text: $viewModel.userNumber,
+                            textFieldView: phoneNumberView,
+                            placeholder: "+",
+                            imageName: "Icon_Phone")
                         .padding(.top, 15)
+                    }
                     
-                    Text("Phone Number")
-                        .font(.custom("Poppins", size: 14))
-                        .fontWeight(.regular)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 20)
-                        .padding(.top, 21)
-                        .foregroundColor(Color.grayExtra)
-                    
-                    UnderlineTextFieldView(
-                        text: $userNumber,
-                        textFieldView: phoneNumberView,
-                        placeholder: "+",
-                        imageName: "Icon_Phone")
+                    VStack {
+                        Text("Email Address")
+                            .font(.custom("Poppins", size: 14))
+                            .fontWeight(.regular)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.horizontal, 20)
+                        //                        .padding(.top, 21)
+                            .foregroundColor(Color.grayExtra)
+                        
+                        
+                        UnderlineTextFieldView(
+                            text: $viewModel.userEmail,
+                            textFieldView: textView,
+                            placeholder: "Email Address",
+                            imageName: "Icon_Email")
                         .padding(.top, 15)
-                    
-                    Text("Email Address")
-                        .font(.custom("Poppins", size: 14))
-                        .fontWeight(.regular)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 20)
-                        .padding(.top, 21)
-                        .foregroundColor(Color.grayExtra)
-                    
-                    
-                    UnderlineTextFieldView(
-                        text: $userEmail,
-                        textFieldView: textView,
-                        placeholder: "Email Address",
-                        imageName: "Icon_Email")
+                    }
+                    VStack {
+                        Text("Password")
+                            .font(.custom("Poppins", size: 14))
+                            .fontWeight(.regular)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.horizontal, 20)
+                        //                        .padding(.top, 21)
+                            .foregroundColor(Color.grayExtra)
+                        
+                        UnderlineTextFieldView(
+                            text: $viewModel.userPassword,
+                            textFieldView: passwordView,
+                            placeholder: "Password",
+                            imageName: "Icon_Password")
                         .padding(.top, 15)
-                    
-                    Text("Password")
-                        .font(.custom("Poppins", size: 14))
-                        .fontWeight(.regular)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 20)
-                        .padding(.top, 21)
-                        .foregroundColor(Color.grayExtra)
-                    
-                    UnderlineTextFieldView(
-                        text: $userPassword,
-                        textFieldView: passwordView,
-                        placeholder: "Password",
-                        imageName: "Icon_Password")
-                        .padding(.top, 15)
-                                    
+                    }
                             
                 }
             }
-        
             
             Button(action: {
                 withAnimation {
-                    if userEmail.isEmpty || userPassword.isEmpty || userName.isEmpty || userNumber.isEmpty {
-                        showAlert = true
+                    if viewModel.validateParams() {
+                        viewModel.showAlert = true
                     } else {
-                        dismiss()
+//                        dismiss()
+                        // TODO: send request on register
+                         viewModel.registerUser()
                     }
                 }
                 
@@ -134,7 +138,7 @@ struct RegisterView: View {
             }
             .frame(height: 56)
             .padding(.horizontal, 20)
-            .alert(isPresented: $showAlert) {
+            .alert(isPresented: $viewModel.showAlert) {
                 Alert(
                     title: Text("Error"),
                     message: Text("Please fill in all fields correctly."),
@@ -158,6 +162,7 @@ struct RegisterView: View {
                         .fontWeight(.regular)
                     }
             }
+            .padding(.bottom, 24)
             
             Spacer()
             
@@ -172,7 +177,7 @@ struct RegisterView: View {
 extension RegisterView {
     
     private var textView: some View {
-        TextField("", text: $userEmail)
+        TextField("", text: $viewModel.userEmail)
             .font(.custom("Poppins", size: 14))
             .fontWeight(.regular)
             .foregroundColor(.white)
@@ -181,7 +186,7 @@ extension RegisterView {
     }
     
     private var userNameView: some View {
-        TextField("", text: $userName)
+        TextField("", text: $viewModel.userName)
             .font(.custom("Poppins", size: 14))
             .fontWeight(.regular)
             .foregroundColor(.white)
@@ -189,7 +194,7 @@ extension RegisterView {
     }
     
     private var phoneNumberView: some View {
-        TextField("", text: $userNumber)
+        TextField("", text: $viewModel.userNumber)
             .font(.custom("Poppins", size: 14))
             .fontWeight(.regular)
             .foregroundColor(.white)
@@ -199,11 +204,11 @@ extension RegisterView {
     private var passwordView: some View {
         HStack {
             if isPasswordVisible {
-                TextField("", text: $userPassword)
+                TextField("", text: $viewModel.userPassword)
                     .foregroundColor(.white)
                     .font(.custom("Poppins", size: 14))
             } else {
-                SecureField("", text: $userPassword)
+                SecureField("", text: $viewModel.userPassword)
                     .foregroundColor(.white)
                     .font(.custom("Poppins", size: 14))
             }
