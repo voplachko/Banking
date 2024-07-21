@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct AuthorizationView: View {
-    @State var userEmail: String = ""
-    @State var userPassword: String = ""
+    
+    @StateObject var viewModel: AuthorizationViewModel = .init()
+    
+    @State var userEmail: String = "77775550002"
+    @State var userPassword: String = "Qwerty123!"
     @State private var isPasswordVisible: Bool = false
     @State private var showAlert: Bool = false
     @State private var isShowProfileView: Bool = false
@@ -85,11 +88,17 @@ struct AuthorizationView: View {
             Spacer().frame(height: 40)
             
             Button(action: {
+                
+                print(UserDefaultsWrapper.userAccount?.login ?? "empty")
                 withAnimation {
                     if userEmail.isEmpty || userPassword.isEmpty {
                         showAlert = true
                     } else {
-                        isShowProfileView = true
+                        
+                        // отправить запрос на авторизацию
+                        viewModel.signIn(credentials: Credentials(login: userEmail,
+                                                                 email: "",
+                                                                 password: userPassword))
                     }
                 }
                 

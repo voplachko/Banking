@@ -37,6 +37,7 @@ struct OnboardingView: View {
                     let tempIndex = self.currentIndex + 1
                     
                     if tempIndex == 3 {
+                        UserDefaultsWrapper.isSeenOnboarding = true
                         isShowAuthView.toggle()
                     }
                     let index = min(self.currentIndex + 1, self.onboardingData.count - 1)

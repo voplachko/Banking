@@ -7,25 +7,28 @@
 
 import Foundation
 
-// MARK: - UserAccount
 struct UserAccount: Codable {
-    let id, login, status: Int
+    let parentLogin: JSONNull?
+    let subjectType, country, id: Int
+    let login: String
+    let status: Int
     let roles: [String]
     let assignments: JSONNull?
-    let token, email, createdAt: String
-    let card: [Card]
+    let token, email: String
+    let createdAt: String
+    let identified: Int
+    let residentKz: Bool
+    let card: JSONNull?
 
     enum CodingKeys: String, CodingKey {
-        case id, login, status, roles, assignments, token, email
+        case parentLogin = "parent_login"
+        case subjectType = "subject_type"
+        case country, id, login, status, roles, assignments, token, email
         case createdAt = "created_at"
+        case identified
+        case residentKz = "resident_kz"
         case card
     }
-}
-
-// MARK: - Card
-struct Card: Codable {
-    let uid, name, expire, mask: String
-    let status: Int
 }
 
 // MARK: - Encode/decode helpers
@@ -54,5 +57,3 @@ class JSONNull: Codable, Hashable {
             try container.encodeNil()
     }
 }
-
-

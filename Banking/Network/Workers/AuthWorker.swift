@@ -8,19 +8,42 @@
 import Foundation
 
 final class AuthWorker {
+    
     func authMobPost(credentials: Credentials,
                   failure: @escaping ((Any) -> Void),
-                  success: @escaping Success<Any>) {
+                  success: @escaping Success<UserAccount>) {
         
         let parameters = ["login": credentials.login,
                           "password": credentials.password]
         
-        NetworkManager.shared.fetchData(from: "/auth/mobile", parameters: parameters, method: .post) { result in
+        let headers: [String: String] = [
+            "partner-name": "wooppay_app_kz",
+            "X-Application-Key": "YWdlbnRvbGVn",
+            "Content-Type": "application/json"
+        ]
+        
+        NetworkManager.shared.fetchData(from: "auth/mobile",
+                                        parameters: parameters,
+                                        headers: headers,
+                                        method: .post) { result in
             
             switch result {
             case .success(let data):
                 // обработать данные
-                success(data)
+                
+                do {
+                    
+                    let jsonDecoder = JSONDecoder()
+                    
+                    // Превратили JSON в  нашу Структуру
+                    let result: UserAccount = try jsonDecoder.decode(UserAccount.self, from: data)
+                    
+                    success(result)
+                    
+                } catch {
+                    print("Error:\(error)")
+                }
+
                 
             case .failure(let error):
                 
@@ -31,18 +54,40 @@ final class AuthWorker {
     }
     
     func authMobGet(credentials: Credentials,
-                  failure: @escaping ((Any) -> Void),
-                  success: @escaping Success<Any>) {
+                    token: String,
+                    failure: @escaping ((Any) -> Void),
+                    success: @escaping Success<UserAccount>) {
         
         let parameters = ["login": credentials.login,
                           "password": credentials.password]
         
-        NetworkManager.shared.fetchData(from: "/auth/mobile", parameters: parameters, method: .get) { result in
+        let headers: [String: String] = [
+            "partner-name": "wooppay_app_kz",
+            "X-Application-Key": "YWdlbnRvbGVn",
+            "Content-Type": "application/json",
+            "Authorization": token
+        ]
+        
+        NetworkManager.shared.fetchData(from: "auth/mobile",
+                                        parameters: parameters,
+                                        headers: headers,
+                                        method: .get) { result in
             
             switch result {
             case .success(let data):
                 // обработать данные
-                success(data)
+              
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    
+                    // Превратили JSON в  нашу Структуру
+                    let result: UserAccount = try jsonDecoder.decode(UserAccount.self, from: data)
+                    
+                    success(result)
+                    
+                } catch {
+                    print("Error:\(error)")
+                }
                 
             case .failure(let error):
                 

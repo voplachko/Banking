@@ -25,14 +25,16 @@ class NetworkManager {
     
     static var shared = NetworkManager()
     
-    let BASE_URL = "https://api.yii2-stage.test.wooppay.com/v1"
+    let BASE_URL = "https://api.yii2-stage.test.wooppay.com"
     
     private init() {}
     
     func fetchData(from urlString: String,
                    parameters: [String: Any]?,
+                   headers: [String: String]? = nil,
                    method: HTTPMethod,
                    completion: @escaping (Result<Data, NetworkError>) -> Void) {
+        
         guard var urlComponents = URLComponents(string: "\(BASE_URL)/v1/\(urlString)") else {
             completion(.failure(.invalidURL))
             return
@@ -40,7 +42,7 @@ class NetworkManager {
         
         print("URLComponents: \(urlComponents)")
         
-        if let parameters = parameters {
+        if let parameters = parameters,  method == .get {
             urlComponents.queryItems = parameters.map { URLQueryItem(name: $0, value: "\($1)")}
             print("Parameters: \(parameters)")
         }
@@ -54,6 +56,22 @@ class NetworkManager {
         
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
+        
+        
+        if let headers = headers {
+            headers.forEach {
+                request.addValue($0.value, forHTTPHeaderField: $0.key)
+            }
+        }
+        
+        if method == .post {
+            do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: parameters as Any, options: [])
+            } catch {
+                completion(.failure(.invalidURL))
+                return
+            }
+        }
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
@@ -81,3 +99,17 @@ class NetworkManager {
 }
 
 
+extension Dictionary {
+    
+    var jsonData: Data? {
+        return try? JSONSerialization.data(withJSONObject: self, options: [.prettyPrinted])
+    }
+    
+    func toJSONString() -> String? {
+        if let jsonData = jsonData {
+            let jsonString = String(data: jsonData, encoding: .utf8)
+            return jsonString
+        }
+        return nil
+    }
+}

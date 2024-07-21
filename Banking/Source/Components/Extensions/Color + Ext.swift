@@ -18,4 +18,7 @@ extension Color {
     
     static var grayProfile =
     Color(UIColor(red: 126 / 255, green: 132 / 255, blue: 141 / 255, alpha: 1.0))
+    
+    static var toolbarColor =
+    Color(UIColor(red: 39 / 255, green: 39 / 255, blue: 58 / 255, alpha: 1.0))
 }
