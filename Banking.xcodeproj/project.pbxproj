@@ -35,6 +35,8 @@
 		F6EC929F2C4D5D0E0072890F /* ThirdScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC929E2C4D5D0E0072890F /* ThirdScreen.swift */; };
 		F6EC92A12C4D5D3D0072890F /* FourthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92A02C4D5D3D0072890F /* FourthScreen.swift */; };
 		F6EC92A52C4D7F950072890F /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92A42C4D7F950072890F /* CustomTabView.swift */; };
+		F6EC92A82C4EF5C00072890F /* HistoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92A72C4EF5C00072890F /* HistoryWorker.swift */; };
+		F6EC92AA2C4F95980072890F /* UserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92A92C4F95980072890F /* UserHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		F6EC929E2C4D5D0E0072890F /* ThirdScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreen.swift; sourceTree = "<group>"; };
 		F6EC92A02C4D5D3D0072890F /* FourthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthScreen.swift; sourceTree = "<group>"; };
 		F6EC92A42C4D7F950072890F /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		F6EC92A72C4EF5C00072890F /* HistoryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryWorker.swift; sourceTree = "<group>"; };
+		F6EC92A92C4F95980072890F /* UserHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				F6B427F52C48620D001DE1E9 /* UserAccount.swift */,
+				F6EC92A92C4F95980072890F /* UserHistory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 			children = (
 				F6B427F12C47F28B001DE1E9 /* RegistrationWorker.swift */,
 				F6EC92962C4A4CB90072890F /* AuthWorker.swift */,
+				F6EC92A72C4EF5C00072890F /* HistoryWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -381,6 +387,7 @@
 				F65EBEDE2C41334900C0230F /* Color + Ext.swift in Sources */,
 				F6EC929D2C4AD0910072890F /* UserDefaultsWrapper.swift in Sources */,
 				F6EC92972C4A4CB90072890F /* AuthWorker.swift in Sources */,
+				F6EC92A82C4EF5C00072890F /* HistoryWorker.swift in Sources */,
 				F65EBE672C3EB51A00C0230F /* Item.swift in Sources */,
 				F6EC92A52C4D7F950072890F /* CustomTabView.swift in Sources */,
 				F6EC92A12C4D5D3D0072890F /* FourthScreen.swift in Sources */,
@@ -395,6 +402,7 @@
 				F6B427ED2C47E017001DE1E9 /* RegistrationViewModel.swift in Sources */,
 				F6B427F02C47EC59001DE1E9 /* NetworkManager.swift in Sources */,
 				F6C6D1872C428AC400547CD3 /* RegisterView.swift in Sources */,
+				F6EC92AA2C4F95980072890F /* UserHistory.swift in Sources */,
 				F6C6D1852C4282CF00547CD3 /* ProfileView.swift in Sources */,
 				F65EBEE22C413B0400C0230F /* AuthorizationView.swift in Sources */,
 			);
