@@ -13,7 +13,6 @@
 		F65EBE692C3EB52800C0230F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F65EBE682C3EB52800C0230F /* Assets.xcassets */; };
 		F65EBE6C2C3EB52800C0230F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F65EBE6B2C3EB52800C0230F /* Preview Assets.xcassets */; };
 		F65EBE7D2C3EBD8E00C0230F /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBE7C2C3EBD8E00C0230F /* SecondScreen.swift */; };
-		F65EBE7F2C3EBE9000C0230F /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBE7E2C3EBE9000C0230F /* FirstScreen.swift */; };
 		F65EBE812C3EC0C100C0230F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBE802C3EC0C100C0230F /* OnboardingView.swift */; };
 		F65EBE832C3EC8F500C0230F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65EBE822C3EC8F500C0230F /* Launch Screen.storyboard */; };
 		F65EBED22C40505900C0230F /* Poppins_SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F65EBED12C40505800C0230F /* Poppins_SemiBold.ttf */; };
@@ -35,8 +34,14 @@
 		F6EC929F2C4D5D0E0072890F /* ThirdScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC929E2C4D5D0E0072890F /* ThirdScreen.swift */; };
 		F6EC92A12C4D5D3D0072890F /* FourthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92A02C4D5D3D0072890F /* FourthScreen.swift */; };
 		F6EC92A52C4D7F950072890F /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92A42C4D7F950072890F /* CustomTabView.swift */; };
-		F6EC92A82C4EF5C00072890F /* HistoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92A72C4EF5C00072890F /* HistoryWorker.swift */; };
-		F6EC92AA2C4F95980072890F /* UserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92A92C4F95980072890F /* UserHistory.swift */; };
+		F6EC92B32C50594B0072890F /* HistoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92B22C50594B0072890F /* HistoryWorker.swift */; };
+		F6EC92B52C5059660072890F /* UserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92B42C5059660072890F /* UserHistory.swift */; };
+		F6EC92B72C5059A40072890F /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92B62C5059A40072890F /* CardWidget.swift */; };
+		F6EC92B92C5059DC0072890F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92B82C5059DC0072890F /* HomeViewModel.swift */; };
+		F6EC92BB2C5059F20072890F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92BA2C5059F20072890F /* HomeView.swift */; };
+		F6EC92BD2C50FD8F0072890F /* TransactionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92BC2C50FD8F0072890F /* TransactionHistoryView.swift */; };
+		F6EC92C02C510AA10072890F /* AllCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92BF2C510AA10072890F /* AllCardsView.swift */; };
+		F6EC92C22C510EE80072890F /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92C12C510EE80072890F /* AddCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +52,6 @@
 		F65EBE682C3EB52800C0230F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F65EBE6B2C3EB52800C0230F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F65EBE7C2C3EBD8E00C0230F /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
-		F65EBE7E2C3EBE9000C0230F /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
 		F65EBE802C3EC0C100C0230F /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		F65EBE822C3EC8F500C0230F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F65EBED02C404A8F00C0230F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -70,8 +74,14 @@
 		F6EC929E2C4D5D0E0072890F /* ThirdScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreen.swift; sourceTree = "<group>"; };
 		F6EC92A02C4D5D3D0072890F /* FourthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthScreen.swift; sourceTree = "<group>"; };
 		F6EC92A42C4D7F950072890F /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
-		F6EC92A72C4EF5C00072890F /* HistoryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryWorker.swift; sourceTree = "<group>"; };
-		F6EC92A92C4F95980072890F /* UserHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHistory.swift; sourceTree = "<group>"; };
+		F6EC92B22C50594B0072890F /* HistoryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryWorker.swift; path = "../../../../../Downloads/Banking 2/Banking/Network/Workers/HistoryWorker.swift"; sourceTree = "<group>"; };
+		F6EC92B42C5059660072890F /* UserHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHistory.swift; path = "../../../../../Downloads/Banking 2/Banking/Network/Models/UserHistory.swift"; sourceTree = "<group>"; };
+		F6EC92B62C5059A40072890F /* CardWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardWidget.swift; path = "../../../../../../Downloads/Banking 2/Banking/Source/Components/Widgets/CardWidget.swift"; sourceTree = "<group>"; };
+		F6EC92B82C5059DC0072890F /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ../HomeViewModel.swift; sourceTree = "<group>"; };
+		F6EC92BA2C5059F20072890F /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = "../../../../../../Downloads/Banking 2/Banking/Source/Modules/Home/HomeView.swift"; sourceTree = "<group>"; };
+		F6EC92BC2C50FD8F0072890F /* TransactionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryView.swift; sourceTree = "<group>"; };
+		F6EC92BF2C510AA10072890F /* AllCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCardsView.swift; sourceTree = "<group>"; };
+		F6EC92C12C510EE80072890F /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				F6B427F52C48620D001DE1E9 /* UserAccount.swift */,
-				F6EC92A92C4F95980072890F /* UserHistory.swift */,
+				F6EC92B42C5059660072890F /* UserHistory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +180,7 @@
 				F65EBEA42C40015B00C0230F /* MyCards */,
 				F65EBEA52C40016D00C0230F /* Statistics */,
 				F65EBEA62C40017600C0230F /* Settings */,
+				F6EC92BE2C50FD960072890F /* Transactions */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -196,7 +207,7 @@
 			children = (
 				F65EBE7B2C3EBD0600C0230F /* Models */,
 				F65EBE642C3EB51A00C0230F /* ContentView.swift */,
-				F65EBE7E2C3EBE9000C0230F /* FirstScreen.swift */,
+				F6EC92BA2C5059F20072890F /* HomeView.swift */,
 				F65EBE7C2C3EBD8E00C0230F /* SecondScreen.swift */,
 				F6EC929E2C4D5D0E0072890F /* ThirdScreen.swift */,
 				F6EC92A02C4D5D3D0072890F /* FourthScreen.swift */,
@@ -215,6 +226,7 @@
 		F65EBE7B2C3EBD0600C0230F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F6EC92B82C5059DC0072890F /* HomeViewModel.swift */,
 				F65EBE662C3EB51A00C0230F /* Item.swift */,
 			);
 			path = Models;
@@ -231,6 +243,7 @@
 		F65EBEA32C40010500C0230F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F6EC92AB2C4FCFBE0072890F /* Widgets */,
 				F65EBEDC2C41330D00C0230F /* Extensions */,
 			);
 			path = Components;
@@ -239,6 +252,8 @@
 		F65EBEA42C40015B00C0230F /* MyCards */ = {
 			isa = PBXGroup;
 			children = (
+				F6EC92BF2C510AA10072890F /* AllCardsView.swift */,
+				F6EC92C12C510EE80072890F /* AddCardView.swift */,
 			);
 			path = MyCards;
 			sourceTree = "<group>";
@@ -283,8 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				F6B427F12C47F28B001DE1E9 /* RegistrationWorker.swift */,
+				F6EC92B22C50594B0072890F /* HistoryWorker.swift */,
 				F6EC92962C4A4CB90072890F /* AuthWorker.swift */,
-				F6EC92A72C4EF5C00072890F /* HistoryWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -305,6 +320,22 @@
 				F6EC929A2C4A8A100072890F /* AuthorizationViewModel.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		F6EC92AB2C4FCFBE0072890F /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				F6EC92B62C5059A40072890F /* CardWidget.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		F6EC92BE2C50FD960072890F /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				F6EC92BC2C50FD8F0072890F /* TransactionHistoryView.swift */,
+			);
+			path = Transactions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,27 +413,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6EC929B2C4A8A100072890F /* AuthorizationViewModel.swift in Sources */,
+				F6EC92B72C5059A40072890F /* CardWidget.swift in Sources */,
 				F65EBE652C3EB51A00C0230F /* ContentView.swift in Sources */,
 				F65EBE7D2C3EBD8E00C0230F /* SecondScreen.swift in Sources */,
 				F65EBEDE2C41334900C0230F /* Color + Ext.swift in Sources */,
 				F6EC929D2C4AD0910072890F /* UserDefaultsWrapper.swift in Sources */,
+				F6EC92C02C510AA10072890F /* AllCardsView.swift in Sources */,
 				F6EC92972C4A4CB90072890F /* AuthWorker.swift in Sources */,
-				F6EC92A82C4EF5C00072890F /* HistoryWorker.swift in Sources */,
 				F65EBE672C3EB51A00C0230F /* Item.swift in Sources */,
 				F6EC92A52C4D7F950072890F /* CustomTabView.swift in Sources */,
+				F6EC92B32C50594B0072890F /* HistoryWorker.swift in Sources */,
 				F6EC92A12C4D5D3D0072890F /* FourthScreen.swift in Sources */,
 				F6EC929F2C4D5D0E0072890F /* ThirdScreen.swift in Sources */,
 				F65EBE812C3EC0C100C0230F /* OnboardingView.swift in Sources */,
 				F6B427F22C47F28B001DE1E9 /* RegistrationWorker.swift in Sources */,
 				F65EBE632C3EB51A00C0230F /* BankingApp.swift in Sources */,
+				F6EC92BD2C50FD8F0072890F /* TransactionHistoryView.swift in Sources */,
+				F6EC92C22C510EE80072890F /* AddCardView.swift in Sources */,
+				F6EC92BB2C5059F20072890F /* HomeView.swift in Sources */,
 				F6C6D17C2C4270EF00547CD3 /* UnderlineTextField.swift in Sources */,
 				F6B427F62C48620D001DE1E9 /* UserAccount.swift in Sources */,
-				F65EBE7F2C3EBE9000C0230F /* FirstScreen.swift in Sources */,
 				F6C6D1782C426A8F00547CD3 /* SafeArea.swift in Sources */,
 				F6B427ED2C47E017001DE1E9 /* RegistrationViewModel.swift in Sources */,
 				F6B427F02C47EC59001DE1E9 /* NetworkManager.swift in Sources */,
+				F6EC92B92C5059DC0072890F /* HomeViewModel.swift in Sources */,
+				F6EC92B52C5059660072890F /* UserHistory.swift in Sources */,
 				F6C6D1872C428AC400547CD3 /* RegisterView.swift in Sources */,
-				F6EC92AA2C4F95980072890F /* UserHistory.swift in Sources */,
 				F6C6D1852C4282CF00547CD3 /* ProfileView.swift in Sources */,
 				F65EBEE22C413B0400C0230F /* AuthorizationView.swift in Sources */,
 			);

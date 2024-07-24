@@ -9,10 +9,11 @@ import Foundation
 
 final class HistoryWorker {
     
-    func getHistory(doneFrom: String,
-                    doneTo: String,
-                    direction: String,
-                    service: String,
+    func getHistory(
+//        doneFrom: String,
+//                    doneTo: String,
+//                    direction: String,
+//                    service: String,
                     short: Bool,
                     language: String = "ru",
                     expand: String? = nil,
@@ -22,13 +23,13 @@ final class HistoryWorker {
                     sort: String? = nil,
                     token: String,
                     failure: @escaping ((Any) -> Void),
-                    success: @escaping Success<UserHistory>) {
+                    success: @escaping Success<[UserHistory]>) {
         
         var parameters: [String: Any] = [
-            "done_from": doneFrom,
-            "done_to": doneTo,
-            "direction": direction,
-            "service": service,
+//            "done_from": doneFrom,
+//            "done_to": doneTo,
+//            "direction": direction,
+//            "service": service,
             "short": short,
             "per-page": perPage,
             "page": page,
@@ -50,11 +51,13 @@ final class HistoryWorker {
         NetworkManager.shared.fetchData(from: "/history", parameters: parameters, headers: headers, method: .get) { result in
             switch result {
             case .success(let data):
+                
                 do {
                     let jsonDecoder = JSONDecoder()
-                    jsonDecoder.dateDecodingStrategy = .iso8601
+                    
                     let userHistory = try jsonDecoder.decode(UserHistory.self, from: data)
-                    success(userHistory)
+                    
+                    success([userHistory])
                 } catch {
                     failure(error)
                 }

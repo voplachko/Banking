@@ -24,7 +24,7 @@ struct ContentView: View {
             VStack {
                 TabView {
                     
-                    FirstScreen()
+                    HomeView()
                         .tabItem {
                             Image(systemName: "house")
                             Text("Home")
