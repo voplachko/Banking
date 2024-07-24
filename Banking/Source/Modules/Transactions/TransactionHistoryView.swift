@@ -71,7 +71,7 @@ struct TransactionHistoryView: View {
     @ViewBuilder
     func HistoryRow(_ item: UserHistory) -> some View {
         HStack {
-            if let pictureURL = URL(string: item.service?.pictureURL ?? "") {
+            if let pictureURL = URL(string: item.service.pictureURL ?? "") {
                 AsyncImage(url: pictureURL) { image in
                     image
                         .frame(width: 42, height: 42)
@@ -90,12 +90,12 @@ struct TransactionHistoryView: View {
             }
 
             VStack(alignment: .leading) {
-                Text(item.service?.name ?? "Service Title")
+                Text(item.service.name)
                     .font(.custom("Poppins", size: 16))
                     .fontWeight(.medium)
                     .foregroundStyle(.white)
 
-                Text(item.service?.description ?? "Service Area")
+                Text(item.service.desc ?? "")
                     .font(.custom("Poppins", size: 12))
                     .fontWeight(.regular)
                     .foregroundStyle(.white)
