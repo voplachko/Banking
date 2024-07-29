@@ -6,10 +6,21 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct AddCardView: View {
     
+    @Environment(\.modelContext) private var modelContext
+    
     @Environment(\.dismiss) private var dismiss
+    
+    @State var pan: String = "4562112245957852"
+    @State var cvv: String = "696"
+    @State var cardHolder: String = "NIKITA NIKITIN"
+    @State var expDate: String = "06/2026"
+    @State var cardSystem: String = "Mastercard"
+    @State var chip: String = "SIM"
+    @State var waves: String = "ContactlessPayment"
     
     var body: some View {
         VStack {
@@ -51,13 +62,46 @@ struct AddCardView: View {
                 
             }
             
+            Button("Save") {
+                // check that pan, cvv, name not empty, then call addCard()
+                addCard()
+            }
+            
             Spacer()
             
         }
         .background(Color.bankingPrimary)
     }
+    
+    func addCard() {
+        
+        let cardItem = CardItem(pan: pan,
+                                cardHolder: cardHolder,
+                                expDate: expDate,
+                                cvv: cvv)
+        
+        modelContext.insert(cardItem)
+    }
 }
 
 #Preview {
     AddCardView()
+        .modelContainer(for: CardItem.self)
+}
+
+
+@Model class CardItem: Identifiable {
+    let id: UUID
+    let pan: String
+    let cardHolder: String
+    let expDate: String
+    let cvv: String
+    
+    init(id: UUID = .init(), pan: String, cardHolder: String, expDate: String, cvv: String) {
+        self.id = id
+        self.pan = pan
+        self.cardHolder = cardHolder
+        self.expDate = expDate
+        self.cvv = cvv
+    }
 }

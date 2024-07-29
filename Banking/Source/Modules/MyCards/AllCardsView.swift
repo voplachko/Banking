@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct AllCardsView: View {
+    
+    @Query var cardItems: [CardItem]
     
     @Environment(\.dismiss) private var dismiss
     @State private var isShowAddCard: Bool = false
@@ -40,24 +43,33 @@ struct AllCardsView: View {
             .padding(.trailing, 20)
             
             ScrollView {
-                CardWidget(pan: "535254252524525",
-                           cvv: "533",
-                           cardHolder: "Bogdan Shmatov",
-                           expDate: "11/2030",
-                           cardSystem: "Mastercard",
-                           chip: "SIM",
-                           waves: "ContactlessPayment")
-                .padding(.top, 30)
                 
-                CardWidget(pan: "4562112245957852",
-                           cvv: "666",
-                           cardHolder: "Tyler Durden",
-                           expDate: "12/2095",
-                           cardSystem: "visa",
-                           chip: "Chip",
-                           waves: "")
-                .padding(.top, 24)
+                LazyVStack {
+                    ForEach(cardItems, id: \.id) { card in
+                        
+                        CardWidget(pan: card.pan,
+                                   cvv: card.cvv,
+                                   cardHolder: card.cardHolder,
+                                   expDate: card.expDate,
+                                   cardSystem: "Mastercard",
+                                   chip: "SIM",
+                                   waves: "ContactlessPayment")
+
+                        .containerRelativeFrame(.vertical)
+                        .scrollTransition(axis: .vertical) { content, phase in
+                            
+                            content
+//                                .rotation3DEffect(.degrees(phase.value * -30), axis: (x: phase.value, y: 1, z: 0))
+                                .scaleEffect(x: phase.isIdentity ? 1 : 0.8, y: phase.isIdentity ? 1 : 0.8)
+                            
+                            
+                        }
+                        .frame(maxHeight: 200)
+                    }
+                }
             }
+            .contentMargins(10)
+            .scrollIndicators(.hidden)
             
             Button(action: {
                 withAnimation {
@@ -86,4 +98,5 @@ struct AllCardsView: View {
 
 #Preview {
     AllCardsView()
+        .modelContainer(for: CardItem.self)
 }

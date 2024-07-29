@@ -87,8 +87,6 @@ class NetworkManager {
                 return
             }
             
-         print(   httpResponce.statusCode ?? "empt")
-            
             guard let httpResponce = response as? HTTPURLResponse, (200..<300).contains(httpResponce.statusCode) else {
                 
                 completion(.failure(.serverError("Server error")))
