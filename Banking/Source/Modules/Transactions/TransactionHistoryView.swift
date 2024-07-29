@@ -95,7 +95,7 @@ struct TransactionHistoryView: View {
                     .fontWeight(.medium)
                     .foregroundStyle(.white)
 
-                Text(item.service.description)
+                Text(item.service.desc ?? "")
                     .font(.custom("Poppins", size: 12))
                     .fontWeight(.regular)
                     .foregroundStyle(.white)
