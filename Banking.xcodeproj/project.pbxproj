@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A65F9172C51229300348312 /* Poppins_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9012C51229200348312 /* Poppins_Regular.ttf */; };
+		5A65F9182C51229300348312 /* Poppins_SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9022C51229200348312 /* Poppins_SemiBold.ttf */; };
+		5A65F9192C51229300348312 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9032C51229200348312 /* Poppins-Black.ttf */; };
+		5A65F91A2C51229300348312 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9042C51229200348312 /* Poppins-BlackItalic.ttf */; };
+		5A65F91B2C51229300348312 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9052C51229200348312 /* Poppins-Bold.ttf */; };
+		5A65F91C2C51229300348312 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9062C51229200348312 /* Poppins-BoldItalic.ttf */; };
+		5A65F91D2C51229300348312 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9072C51229200348312 /* Poppins-ExtraBold.ttf */; };
+		5A65F91E2C51229300348312 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9082C51229200348312 /* Poppins-ExtraBoldItalic.ttf */; };
+		5A65F91F2C51229300348312 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9092C51229200348312 /* Poppins-ExtraLight.ttf */; };
+		5A65F9202C51229300348312 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F90A2C51229200348312 /* Poppins-ExtraLightItalic.ttf */; };
+		5A65F9212C51229300348312 /* Poppins-Italic-VariableFont_wght.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F90B2C51229200348312 /* Poppins-Italic-VariableFont_wght.otf */; };
+		5A65F9222C51229300348312 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F90C2C51229200348312 /* Poppins-Italic.ttf */; };
+		5A65F9232C51229300348312 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F90D2C51229200348312 /* Poppins-Light.ttf */; };
+		5A65F9242C51229300348312 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F90E2C51229200348312 /* Poppins-LightItalic.ttf */; };
+		5A65F9252C51229300348312 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F90F2C51229200348312 /* Poppins-Medium.ttf */; };
+		5A65F9262C51229300348312 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9102C51229200348312 /* Poppins-MediumItalic.ttf */; };
+		5A65F9272C51229300348312 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9112C51229200348312 /* Poppins-Regular.ttf */; };
+		5A65F9282C51229300348312 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9122C51229200348312 /* Poppins-SemiBoldItalic.ttf */; };
+		5A65F9292C51229300348312 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9132C51229200348312 /* Poppins-Thin.ttf */; };
+		5A65F92A2C51229300348312 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9142C51229200348312 /* Poppins-ThinItalic.ttf */; };
+		5A65F92B2C51229300348312 /* Poppins-VariableFont_wght.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A65F9152C51229200348312 /* Poppins-VariableFont_wght.otf */; };
+		F65EBE632C3EB51A00C0230F /* BankingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBE622C3EB51A00C0230F /* BankingApp.swift */; };
+		F65EBE652C3EB51A00C0230F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBE642C3EB51A00C0230F /* ContentView.swift */; };
+		F65EBE672C3EB51A00C0230F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBE662C3EB51A00C0230F /* Item.swift */; };
+		F65EBE692C3EB52800C0230F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F65EBE682C3EB52800C0230F /* Assets.xcassets */; };
+		F65EBE6C2C3EB52800C0230F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F65EBE6B2C3EB52800C0230F /* Preview Assets.xcassets */; };
+		F65EBE7D2C3EBD8E00C0230F /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBE7C2C3EBD8E00C0230F /* SecondScreen.swift */; };
+		F65EBE812C3EC0C100C0230F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBE802C3EC0C100C0230F /* OnboardingView.swift */; };
+		F65EBE832C3EC8F500C0230F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65EBE822C3EC8F500C0230F /* Launch Screen.storyboard */; };
+		F65EBEDE2C41334900C0230F /* Color + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBEDD2C41334900C0230F /* Color + Ext.swift */; };
+		F65EBEE22C413B0400C0230F /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EBEE12C413B0400C0230F /* AuthorizationView.swift */; };
+		F6B427ED2C47E017001DE1E9 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B427EC2C47E017001DE1E9 /* RegistrationViewModel.swift */; };
+		F6B427F02C47EC59001DE1E9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B427EF2C47EC59001DE1E9 /* NetworkManager.swift */; };
+		F6B427F22C47F28B001DE1E9 /* RegistrationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B427F12C47F28B001DE1E9 /* RegistrationWorker.swift */; };
+		F6B427F62C48620D001DE1E9 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B427F52C48620D001DE1E9 /* UserAccount.swift */; };
+		F6C6D1782C426A8F00547CD3 /* SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C6D1772C426A8F00547CD3 /* SafeArea.swift */; };
+		F6C6D17C2C4270EF00547CD3 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C6D17B2C4270EF00547CD3 /* UnderlineTextField.swift */; };
+		F6C6D1852C4282CF00547CD3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C6D1842C4282CF00547CD3 /* ProfileView.swift */; };
+		F6C6D1872C428AC400547CD3 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C6D1862C428AC400547CD3 /* RegisterView.swift */; };
+		F6EC92972C4A4CB90072890F /* AuthWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92962C4A4CB90072890F /* AuthWorker.swift */; };
+		F6EC929B2C4A8A100072890F /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC929A2C4A8A100072890F /* AuthorizationViewModel.swift */; };
+		F6EC929D2C4AD0910072890F /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC929C2C4AD0910072890F /* UserDefaultsWrapper.swift */; };
+		F6EC929F2C4D5D0E0072890F /* ThirdScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC929E2C4D5D0E0072890F /* ThirdScreen.swift */; };
+		F6EC92A12C4D5D3D0072890F /* FourthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92A02C4D5D3D0072890F /* FourthScreen.swift */; };
+		F6EC92A52C4D7F950072890F /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92A42C4D7F950072890F /* CustomTabView.swift */; };
+		F6EC92B32C50594B0072890F /* HistoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92B22C50594B0072890F /* HistoryWorker.swift */; };
+		F6EC92B52C5059660072890F /* UserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92B42C5059660072890F /* UserHistory.swift */; };
+		F6EC92B72C5059A40072890F /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92B62C5059A40072890F /* CardWidget.swift */; };
+		F6EC92B92C5059DC0072890F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92B82C5059DC0072890F /* HomeViewModel.swift */; };
+		F6EC92BB2C5059F20072890F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92BA2C5059F20072890F /* HomeView.swift */; };
+		F6EC92BD2C50FD8F0072890F /* TransactionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92BC2C50FD8F0072890F /* TransactionHistoryView.swift */; };
+		F6EC92C02C510AA10072890F /* AllCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92BF2C510AA10072890F /* AllCardsView.swift */; };
+		F6EC92C22C510EE80072890F /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC92C12C510EE80072890F /* AddCardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5A65F9012C51229200348312 /* Poppins_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Poppins_Regular.ttf; sourceTree = "<group>"; };
+		5A65F9022C51229200348312 /* Poppins_SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Poppins_SemiBold.ttf; sourceTree = "<group>"; };
+		5A65F9032C51229200348312 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		5A65F9042C51229200348312 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		5A65F9052C51229200348312 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		5A65F9062C51229200348312 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		5A65F9072C51229200348312 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		5A65F9082C51229200348312 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		5A65F9092C51229200348312 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		5A65F90A2C51229200348312 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		5A65F90B2C51229200348312 /* Poppins-Italic-VariableFont_wght.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic-VariableFont_wght.otf"; sourceTree = "<group>"; };
+		5A65F90C2C51229200348312 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		5A65F90D2C51229200348312 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		5A65F90E2C51229200348312 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		5A65F90F2C51229200348312 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		5A65F9102C51229200348312 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		5A65F9112C51229200348312 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		5A65F9122C51229200348312 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		5A65F9132C51229200348312 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		5A65F9142C51229200348312 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		5A65F9152C51229200348312 /* Poppins-VariableFont_wght.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-VariableFont_wght.otf"; sourceTree = "<group>"; };
+		F65EBE5F2C3EB51A00C0230F /* Banking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F65EBE622C3EB51A00C0230F /* BankingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingApp.swift; sourceTree = "<group>"; };
+		F65EBE642C3EB51A00C0230F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F65EBE662C3EB51A00C0230F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F65EBE6B2C3EB52800C0230F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F65EBE7C2C3EBD8E00C0230F /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
+		F65EBE802C3EC0C100C0230F /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		F65EBED02C404A8F00C0230F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F65EBEDD2C41334900C0230F /* Color + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Ext.swift"; sourceTree = "<group>"; };
+		F65EBEE12C413B0400C0230F /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		F6B427EC2C47E017001DE1E9 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		F6B427EF2C47EC59001DE1E9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F6B427F12C47F28B001DE1E9 /* RegistrationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationWorker.swift; sourceTree = "<group>"; };
+		F6B427F52C48620D001DE1E9 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
+		F6C6D1772C426A8F00547CD3 /* SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeArea.swift; sourceTree = "<group>"; };
+		F6C6D17B2C4270EF00547CD3 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
+		F6C6D1842C4282CF00547CD3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F6C6D1862C428AC400547CD3 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		F6EC92962C4A4CB90072890F /* AuthWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWorker.swift; sourceTree = "<group>"; };
+		F6EC929A2C4A8A100072890F /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
+		F6EC929C2C4AD0910072890F /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		F6EC929E2C4D5D0E0072890F /* ThirdScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreen.swift; sourceTree = "<group>"; };
+		F6EC92A02C4D5D3D0072890F /* FourthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthScreen.swift; sourceTree = "<group>"; };
+		F6EC92A42C4D7F950072890F /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		F6EC92B22C50594B0072890F /* HistoryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryWorker.swift; path = "../../../../../Downloads/Banking 2/Banking/Network/Workers/HistoryWorker.swift"; sourceTree = "<group>"; };
+		F6EC92B42C5059660072890F /* UserHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHistory.swift; path = "../../../../../Downloads/Banking 2/Banking/Network/Models/UserHistory.swift"; sourceTree = "<group>"; };
+		F6EC92B62C5059A40072890F /* CardWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardWidget.swift; path = "../../../../../../Downloads/Banking 2/Banking/Source/Components/Widgets/CardWidget.swift"; sourceTree = "<group>"; };
+		F6EC92B82C5059DC0072890F /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ../HomeViewModel.swift; sourceTree = "<group>"; };
+		F6EC92BA2C5059F20072890F /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = "../../../../../../Downloads/Banking 2/Banking/Source/Modules/Home/HomeView.swift"; sourceTree = "<group>"; };
+		F6EC92BC2C50FD8F0072890F /* TransactionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryView.swift; sourceTree = "<group>"; };
+		F6EC92BF2C510AA10072890F /* AllCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCardsView.swift; sourceTree = "<group>"; };
+		F6EC92C12C510EE80072890F /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F65EBE5C2C3EB51A00C0230F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A65F9162C51229200348312 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5A65F9012C51229200348312 /* Poppins_Regular.ttf */,
+				5A65F9022C51229200348312 /* Poppins_SemiBold.ttf */,
+				5A65F9032C51229200348312 /* Poppins-Black.ttf */,
+				5A65F9042C51229200348312 /* Poppins-BlackItalic.ttf */,
+				5A65F9052C51229200348312 /* Poppins-Bold.ttf */,
+				5A65F9062C51229200348312 /* Poppins-BoldItalic.ttf */,
+				5A65F9072C51229200348312 /* Poppins-ExtraBold.ttf */,
+				5A65F9082C51229200348312 /* Poppins-ExtraBoldItalic.ttf */,
+				5A65F9092C51229200348312 /* Poppins-ExtraLight.ttf */,
+				5A65F90A2C51229200348312 /* Poppins-ExtraLightItalic.ttf */,
+				5A65F90B2C51229200348312 /* Poppins-Italic-VariableFont_wght.otf */,
+				5A65F90C2C51229200348312 /* Poppins-Italic.ttf */,
+				5A65F90D2C51229200348312 /* Poppins-Light.ttf */,
+				5A65F90E2C51229200348312 /* Poppins-LightItalic.ttf */,
+				5A65F90F2C51229200348312 /* Poppins-Medium.ttf */,
+				5A65F9102C51229200348312 /* Poppins-MediumItalic.ttf */,
+				5A65F9112C51229200348312 /* Poppins-Regular.ttf */,
+				5A65F9122C51229200348312 /* Poppins-SemiBoldItalic.ttf */,
+				5A65F9132C51229200348312 /* Poppins-Thin.ttf */,
+				5A65F9142C51229200348312 /* Poppins-ThinItalic.ttf */,
+				5A65F9152C51229200348312 /* Poppins-VariableFont_wght.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5ADD37C22C5120EE00E83BCF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5ADD37BE2C5120EE00E83BCF /* Fonts */,
+				5ADD37BF2C5120EE00E83BCF /* Assets.xcassets */,
+				5ADD37C02C5120EE00E83BCF /* Color.swift */,
+				5ADD37C12C5120EE00E83BCF /* Launch Screen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F65EBE562C3EB51A00C0230F = {
+			isa = PBXGroup;
+			children = (
+				F65EBE612C3EB51A00C0230F /* Banking */,
+				F65EBE602C3EB51A00C0230F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F65EBE602C3EB51A00C0230F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F65EBE5F2C3EB51A00C0230F /* Banking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F65EBE612C3EB51A00C0230F /* Banking */ = {
+			isa = PBXGroup;
+			children = (
+				5ADD37C22C5120EE00E83BCF /* Resource */,
+				F65EBED02C404A8F00C0230F /* Info.plist */,
+				F65EBE742C3EBBB800C0230F /* Network */,
+				F65EBE722C3EBBA500C0230F /* Source */,
+				F65EBE6A2C3EB52800C0230F /* Preview Content */,
+			);
+			path = Banking;
+			sourceTree = "<group>";
+		};
+		F65EBE6A2C3EB52800C0230F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F65EBE6B2C3EB52800C0230F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F65EBE722C3EBBA500C0230F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F65EBEA22C4000C900C0230F /* App */,
+				F65EBEA32C40010500C0230F /* Components */,
+				F65EBE762C3EBC4400C0230F /* Modules */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F65EBE732C3EBBAE00C0230F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5A65F9162C51229200348312 /* Fonts */,
+				F65EBE682C3EB52800C0230F /* Assets.xcassets */,
+				F65EBE822C3EC8F500C0230F /* Launch Screen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F65EBE742C3EBBB800C0230F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F6B427EF2C47EC59001DE1E9 /* NetworkManager.swift */,
+				F6B427EE2C47EBCA001DE1E9 /* Workers */,
+				F65EBE752C3EBC0600C0230F /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F65EBE752C3EBC0600C0230F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6B427F52C48620D001DE1E9 /* UserAccount.swift */,
+				F6EC92B42C5059660072890F /* UserHistory.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F65EBE762C3EBC4400C0230F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F65EBE772C3EBCB400C0230F /* Onboarding */,
+				F65EBE7A2C3EBCD400C0230F /* Profile */,
+				F65EBE782C3EBCC200C0230F /* Authorization */,
+				F65EBE792C3EBCCF00C0230F /* Home */,
+				F65EBEA42C40015B00C0230F /* MyCards */,
+				F65EBEA52C40016D00C0230F /* Statistics */,
+				F65EBEA62C40017600C0230F /* Settings */,
+				F6EC92BE2C50FD960072890F /* Transactions */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F65EBE772C3EBCB400C0230F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F65EBE802C3EC0C100C0230F /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		F65EBE782C3EBCC200C0230F /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				F6B427F42C486103001DE1E9 /* Auth */,
+				F6B427F32C4860F8001DE1E9 /* Registration */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		F65EBE792C3EBCCF00C0230F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F65EBE7B2C3EBD0600C0230F /* Models */,
+				F65EBE642C3EB51A00C0230F /* ContentView.swift */,
+				F6EC92BA2C5059F20072890F /* HomeView.swift */,
+				F65EBE7C2C3EBD8E00C0230F /* SecondScreen.swift */,
+				F6EC929E2C4D5D0E0072890F /* ThirdScreen.swift */,
+				F6EC92A02C4D5D3D0072890F /* FourthScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F65EBE7A2C3EBCD400C0230F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F6C6D1842C4282CF00547CD3 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F65EBE7B2C3EBD0600C0230F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6EC92B82C5059DC0072890F /* HomeViewModel.swift */,
+				F65EBE662C3EB51A00C0230F /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F65EBEA22C4000C900C0230F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F65EBE622C3EB51A00C0230F /* BankingApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F65EBEA32C40010500C0230F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F6EC92AB2C4FCFBE0072890F /* Widgets */,
+				F65EBEDC2C41330D00C0230F /* Extensions */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F65EBEA42C40015B00C0230F /* MyCards */ = {
+			isa = PBXGroup;
+			children = (
+				F6EC92BF2C510AA10072890F /* AllCardsView.swift */,
+				F6EC92C12C510EE80072890F /* AddCardView.swift */,
+			);
+			path = MyCards;
+			sourceTree = "<group>";
+		};
+		F65EBEA52C40016D00C0230F /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		F65EBEA62C40017600C0230F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F65EBEDC2C41330D00C0230F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F65EBEDD2C41334900C0230F /* Color + Ext.swift */,
+				F6C6D1772C426A8F00547CD3 /* SafeArea.swift */,
+				F6C6D17B2C4270EF00547CD3 /* UnderlineTextField.swift */,
+				F6EC929C2C4AD0910072890F /* UserDefaultsWrapper.swift */,
+				F6EC92A42C4D7F950072890F /* CustomTabView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F6B427EE2C47EBCA001DE1E9 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				F6B427F12C47F28B001DE1E9 /* RegistrationWorker.swift */,
+				F6EC92B22C50594B0072890F /* HistoryWorker.swift */,
+				F6EC92962C4A4CB90072890F /* AuthWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		F6B427F32C4860F8001DE1E9 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				F6C6D1862C428AC400547CD3 /* RegisterView.swift */,
+				F6B427EC2C47E017001DE1E9 /* RegistrationViewModel.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		F6B427F42C486103001DE1E9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				F65EBEE12C413B0400C0230F /* AuthorizationView.swift */,
+				F6EC929A2C4A8A100072890F /* AuthorizationViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		F6EC92AB2C4FCFBE0072890F /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				F6EC92B62C5059A40072890F /* CardWidget.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		F6EC92BE2C50FD960072890F /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				F6EC92BC2C50FD8F0072890F /* TransactionHistoryView.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F65EBE5E2C3EB51A00C0230F /* Banking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F65EBE6F2C3EB52800C0230F /* Build configuration list for PBXNativeTarget "Banking" */;
+			buildPhases = (
+				F65EBE5B2C3EB51A00C0230F /* Sources */,
+				F65EBE5C2C3EB51A00C0230F /* Frameworks */,
+				F65EBE5D2C3EB51A00C0230F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Banking;
+			productName = Banking;
+			productReference = F65EBE5F2C3EB51A00C0230F /* Banking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F65EBE572C3EB51A00C0230F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					F65EBE5E2C3EB51A00C0230F = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = F65EBE5A2C3EB51A00C0230F /* Build configuration list for PBXProject "Banking" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F65EBE562C3EB51A00C0230F;
+			productRefGroup = F65EBE602C3EB51A00C0230F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F65EBE5E2C3EB51A00C0230F /* Banking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F65EBE5D2C3EB51A00C0230F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A65F9242C51229300348312 /* Poppins-LightItalic.ttf in Resources */,
+				5A65F91F2C51229300348312 /* Poppins-ExtraLight.ttf in Resources */,
+				5A65F91C2C51229300348312 /* Poppins-BoldItalic.ttf in Resources */,
+				5A65F9192C51229300348312 /* Poppins-Black.ttf in Resources */,
+				5A65F9262C51229300348312 /* Poppins-MediumItalic.ttf in Resources */,
+				5A65F9222C51229300348312 /* Poppins-Italic.ttf in Resources */,
+				5A65F91A2C51229300348312 /* Poppins-BlackItalic.ttf in Resources */,
+				F65EBE832C3EC8F500C0230F /* Launch Screen.storyboard in Resources */,
+				5A65F92B2C51229300348312 /* Poppins-VariableFont_wght.otf in Resources */,
+				5A65F91B2C51229300348312 /* Poppins-Bold.ttf in Resources */,
+				5A65F9292C51229300348312 /* Poppins-Thin.ttf in Resources */,
+				5A65F9182C51229300348312 /* Poppins_SemiBold.ttf in Resources */,
+				5A65F91E2C51229300348312 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				5A65F9202C51229300348312 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				5A65F91D2C51229300348312 /* Poppins-ExtraBold.ttf in Resources */,
+				5A65F9232C51229300348312 /* Poppins-Light.ttf in Resources */,
+				5A65F9212C51229300348312 /* Poppins-Italic-VariableFont_wght.otf in Resources */,
+				5A65F9172C51229300348312 /* Poppins_Regular.ttf in Resources */,
+				5A65F9252C51229300348312 /* Poppins-Medium.ttf in Resources */,
+				5A65F9282C51229300348312 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				F65EBE6C2C3EB52800C0230F /* Preview Assets.xcassets in Resources */,
+				5A65F92A2C51229300348312 /* Poppins-ThinItalic.ttf in Resources */,
+				F65EBE692C3EB52800C0230F /* Assets.xcassets in Resources */,
+				5A65F9272C51229300348312 /* Poppins-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F65EBE5B2C3EB51A00C0230F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6EC929B2C4A8A100072890F /* AuthorizationViewModel.swift in Sources */,
+				F6EC92B72C5059A40072890F /* CardWidget.swift in Sources */,
+				F65EBE652C3EB51A00C0230F /* ContentView.swift in Sources */,
+				F65EBE7D2C3EBD8E00C0230F /* SecondScreen.swift in Sources */,
+				F65EBEDE2C41334900C0230F /* Color + Ext.swift in Sources */,
+				F6EC929D2C4AD0910072890F /* UserDefaultsWrapper.swift in Sources */,
+				F6EC92C02C510AA10072890F /* AllCardsView.swift in Sources */,
+				F6EC92972C4A4CB90072890F /* AuthWorker.swift in Sources */,
+				F65EBE672C3EB51A00C0230F /* Item.swift in Sources */,
+				F6EC92A52C4D7F950072890F /* CustomTabView.swift in Sources */,
+				F6EC92B32C50594B0072890F /* HistoryWorker.swift in Sources */,
+				F6EC92A12C4D5D3D0072890F /* FourthScreen.swift in Sources */,
+				F6EC929F2C4D5D0E0072890F /* ThirdScreen.swift in Sources */,
+				F65EBE812C3EC0C100C0230F /* OnboardingView.swift in Sources */,
+				F6B427F22C47F28B001DE1E9 /* RegistrationWorker.swift in Sources */,
+				F65EBE632C3EB51A00C0230F /* BankingApp.swift in Sources */,
+				F6EC92BD2C50FD8F0072890F /* TransactionHistoryView.swift in Sources */,
+				F6EC92C22C510EE80072890F /* AddCardView.swift in Sources */,
+				F6EC92BB2C5059F20072890F /* HomeView.swift in Sources */,
+				F6C6D17C2C4270EF00547CD3 /* UnderlineTextField.swift in Sources */,
+				F6B427F62C48620D001DE1E9 /* UserAccount.swift in Sources */,
+				F6C6D1782C426A8F00547CD3 /* SafeArea.swift in Sources */,
+				F6B427ED2C47E017001DE1E9 /* RegistrationViewModel.swift in Sources */,
+				5ADD37D92C5120EE00E83BCF /* Color.swift in Sources */,
+				F6B427F02C47EC59001DE1E9 /* NetworkManager.swift in Sources */,
+				F6EC92B92C5059DC0072890F /* HomeViewModel.swift in Sources */,
+				F6EC92B52C5059660072890F /* UserHistory.swift in Sources */,
+				F6C6D1872C428AC400547CD3 /* RegisterView.swift in Sources */,
+				F6C6D1852C4282CF00547CD3 /* ProfileView.swift in Sources */,
+				F65EBEE22C413B0400C0230F /* AuthorizationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F65EBE6D2C3EB52800C0230F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F65EBE6E2C3EB52800C0230F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F65EBE702C3EB52800C0230F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Banking/Preview Content\"";
+				DEVELOPMENT_TEAM = 2XBX55HUH5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Banking/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "\"\"";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = voplachko.Banking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F65EBE712C3EB52800C0230F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Banking/Preview Content\"";
+				DEVELOPMENT_TEAM = 2XBX55HUH5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Banking/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "\"\"";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = voplachko.Banking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F65EBE5A2C3EB51A00C0230F /* Build configuration list for PBXProject "Banking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F65EBE6D2C3EB52800C0230F /* Debug */,
+				F65EBE6E2C3EB52800C0230F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F65EBE6F2C3EB52800C0230F /* Build configuration list for PBXNativeTarget "Banking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F65EBE702C3EB52800C0230F /* Debug */,
+				F65EBE712C3EB52800C0230F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F65EBE572C3EB51A00C0230F /* Project object */;
+}
