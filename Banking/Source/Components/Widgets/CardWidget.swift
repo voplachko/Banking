@@ -2,7 +2,7 @@
 //  CardWidget.swift
 //  Banking
 //
-//  Created by Всеволод Оплачко on 23.07.2024.
+//  Created by Bogdan Shmatov on 23.07.2024.
 //
 
 import SwiftUI
@@ -10,10 +10,12 @@ import SwiftUI
 struct CardWidget: View {
     
     @State var pan: String = "4562112245957852"
-    @State var cvv: String = ""
-    @State var cardHolder: String = ""
-    @State var expDate: String = ""
-    @State var cardSystem: String = ""
+    @State var cvv: String = "696"
+    @State var cardHolder: String = "NIKITA NIKITIN"
+    @State var expDate: String = "06/2026"
+    @State var cardSystem: String = "Mastercard"
+    @State var chip: String = "SIM"
+    @State var waves: String = "ContactlessPayment"
     
     var formatedPan: [String] {
         return splitStringIntoChunks(pan)
@@ -22,14 +24,22 @@ struct CardWidget: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             
+            HStack {
+                Image(chip)
+                
+                Spacer()
+                
+                Image(waves)
+            }
+            .padding(.top, 10)
+            
             Spacer()
             HStack(alignment: .center) {
-                
+
                 ForEach(formatedPan, id: \.self) {
                     Text($0)
                     Spacer()
                 }
-        
             }
             .font(.custom("Inter", size: 24))
             .foregroundColor(.white)
@@ -38,9 +48,10 @@ struct CardWidget: View {
                 .font(.custom("Inter", size: 13))
                 .foregroundColor(.white)
             
+            
             HStack(spacing: 22) {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("Expiry Date")
+                    Text("Date")
                         .foregroundStyle(.gray)
                     Text(expDate)
                 }
@@ -49,7 +60,9 @@ struct CardWidget: View {
                     Text("CVV")
                         .foregroundStyle(.gray)
                     Text(cvv)
+
                 }
+                
                 Spacer()
                 Image(cardSystem)
             }
@@ -64,11 +77,11 @@ struct CardWidget: View {
             Image("Card")
                 .resizable()
                 .padding(.horizontal, 20)
-                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                .aspectRatio(contentMode: .fill)
         )
     }
     
-    private func splitStringIntoChunks(_ input: String, chunkSize: Int? = nil) -> [String]  {
+    private func splitStringIntoChunks(_ input: String, chunkSize: Int? = nil) -> [String] {
         let chunkSize = chunkSize ?? 4
         
         var chunks: [String] = []

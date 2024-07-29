@@ -48,16 +48,16 @@ final class HistoryWorker {
         let headers = ["language": language,
                        "Authorization": token]
         
-        NetworkManager.shared.fetchData(from: "/history", parameters: parameters, headers: headers, method: .get) { result in
+        NetworkManager.shared.fetchData(from: "history", parameters: parameters, headers: headers, method: .get) { result in
             switch result {
             case .success(let data):
                 
                 do {
                     let jsonDecoder = JSONDecoder()
                     
-                    let userHistory = try jsonDecoder.decode(UserHistory.self, from: data)
+                    let userHistory = try jsonDecoder.decode([UserHistory].self, from: data)
                     
-                    success([userHistory])
+                    success(userHistory)
                 } catch {
                     failure(error)
                 }

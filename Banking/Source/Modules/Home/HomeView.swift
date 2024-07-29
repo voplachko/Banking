@@ -11,6 +11,8 @@ struct HomeView: View {
     
     @AppStorage("kIsUserAuthorized") var isUserAuthorized: Bool = false
     @StateObject var model: HomeViewModel = .init()
+    @State private var isShowTransactionHistoryView: Bool = false
+    @State private var isShowAllCards: Bool = false
     
     var body: some View {
         ScrollView {
@@ -40,7 +42,7 @@ struct HomeView: View {
                     
                     Image("Search")
                         .frame(width: 42, height: 42)
-                        
+                    
                 }
                 .padding(.leading, 20)
                 .padding(.trailing, 20)
@@ -51,7 +53,14 @@ struct HomeView: View {
                            cvv: "533",
                            cardHolder: "Bogdan Shmatov",
                            expDate: "11/2030",
-                           cardSystemName: "Visa")
+                           cardSystem: "Mastercard",
+                           chip: "SIM",
+                           waves: "ContactlessPayment")
+                .onTapGesture {
+                    withAnimation {
+                        isShowAllCards = true
+                    }
+                }
                 
                 VStack {
                     HStack {
@@ -93,19 +102,11 @@ struct HomeView: View {
                                 .foregroundColor(Color.grayExtra)
                         }
                     }
-                    .padding(.top, 200)
+                    .padding(.top, 30)
                     .padding(.leading, 20)
                     .padding(.trailing, 20)
                     
                     
-                  
-                    
-                    ForEach(model.operations, id: \.id) { item in
-                      
-                        
-                        HistoryRow(item)
-                        
-                    }
                     
                     HStack {
                         Text("Transaction")
@@ -115,8 +116,8 @@ struct HomeView: View {
                         
                         Spacer()
                         
-                        Button("Sell all") {
-                            
+                        Button("See all") {
+                            isShowTransactionHistoryView = true
                         }
                         .font(.custom("Poppins", size: 14))
                         .fontWeight(.medium)
@@ -125,29 +126,81 @@ struct HomeView: View {
                     .padding()
                     .padding(.leading, 20)
                     .padding(.trailing, 20)
-                
-  
+                    
+                    ForEach(model.operations, id: \.id) { item in
+                        
+                        HistoryRow(item)
+                        
+                    }
+                    
+                    
                 }
                 
-              
+                
                 
             }
         }
         .frame(maxWidth: .infinity)
         .background(Color.bankingPrimary)
-//        .ignoresSafeArea(.all)
+        //        .ignoresSafeArea(.all)
         .onAppear {
             model.getHistory()
+        }
+        .fullScreenCover(isPresented: $isShowTransactionHistoryView) {
+            TransactionHistoryView()
+        }
+        .fullScreenCover(isPresented: $isShowAllCards) {
+            AllCardsView()
         }
     }
     
     @ViewBuilder
     func HistoryRow(_ item: UserHistory) -> some View {
-        
-        
-        Text("history Item \(item.title)")
-            .foregroundStyle(.white)
-        
+        HStack {
+            if let pictureURL = URL(string: item.service.pictureURL ?? "") {
+                AsyncImage(url: pictureURL) { image in
+                    image
+                        .resizable()
+                        .frame(width: 42, height: 42)
+                        .clipShape(Circle())
+                        .aspectRatio(contentMode: .fit)
+                } placeholder: {
+                    ProgressView()
+                        .frame(width: 42, height: 42)
+                }
+                .padding(.trailing, 17)
+            } else {
+                Image(systemName: "photo")
+                    .resizable()
+                    .frame(width: 42, height: 42)
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(Circle())
+                    .foregroundStyle(.gray)
+                    .padding(.trailing, 17)
+            }
+            
+            VStack(alignment: .leading) {
+                Text(item.service.title)
+                    .font(.custom("Poppins", size: 16))
+                    .fontWeight(.medium)
+                    .foregroundStyle(.white)
+                
+                Text(item.service.desc ?? "")
+                    .font(.custom("Poppins", size: 12))
+                    .fontWeight(.regular)
+                    .foregroundStyle(.white)
+                    .opacity(0.5)
+            }
+            
+            Spacer()
+            
+            Text("- $\(item.amount, specifier: "%.2f")")
+                .font(.custom("Poppins", size: 16))
+                .fontWeight(.medium)
+                .foregroundStyle(.white)
+        }
+        .padding(.leading, 20)
+        .padding(.trailing, 20)
     }
 }
 

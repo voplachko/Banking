@@ -9,90 +9,73 @@ import Foundation
 
 // MARK: - UserHistory
 struct UserHistory: Codable {
-    let id, parentID, amount, currency: Int
+    let id, parentID, currency: Int
+    let amount: Double
     let status: Int
     let direction: String
     let type: Int
     let title: String
-    let description, account: JSONNull?
     let serviceID: Int
-    let externalID: String
-    let createdAt: Date
-    let billingInfo: JSONNull?
-    let donnedAt: Date
-    let receipt, cardHash, values: JSONNull?
-    let commissionUpper: Int
     let subjectFrom, subjectTo, specialist: String
     let service: Service
-    let cashback: Int
-    let operationType: JSONNull?
 
     enum CodingKeys: String, CodingKey {
         case id
         case parentID = "parentId"
-        case amount, currency, status, direction, type, title, description, account
+        case amount, currency, status, direction, type, title
         case serviceID = "service_id"
-        case externalID = "external_id"
-        case createdAt = "created_at"
-        case billingInfo
-        case donnedAt = "donned_at"
-        case receipt
-        case cardHash = "card_hash"
-        case values
-        case commissionUpper = "commission_upper"
         case subjectFrom = "subject_from"
         case subjectTo = "subject_to"
-        case specialist, service, cashback
-        case operationType = "operation_type"
+        case specialist, service
     }
 }
 
 // MARK: - Service
-struct Service: Codable {
-    let id: Int
-    let name: String
-    let parentID: JSONNull?
-    let title, description, descriptionCompany, site: String
-    let instruction, commissionInfo: String
-    let picture: JSONNull?
-    let synonyms: [JSONAny]
-    let type: Int
-    let terminalType: JSONNull?
-    let status: Int
-    let template: JSONNull?
-    let isSimple: Bool
-    let priority: Int
-    let updatedAt: Date
-    let fields, categories, children, parent: JSONNull?
-    let blacklist: Bool
-    let countryCode, acquiringAccess: Int
-    let params, promo, subject, fastInput: JSONNull?
-    let categoryName, categoryID, pictureURL: JSONNull?
-
+public struct Service: Codable {
+    
+    public let id: Int
+    public let parentID, status: Int?
+    public let title, name: String
+    public let picture: String?
+    public let desc: String?
+    public let pictureURL: String?
+    
+    
     enum CodingKeys: String, CodingKey {
-        case id, name
+        case id, title, name, status
         case parentID = "parent_id"
-        case title, description
-        case descriptionCompany = "description_company"
-        case site, instruction
-        case commissionInfo = "commission_info"
-        case picture, synonyms, type
-        case terminalType = "terminal_type"
-        case status, template
-        case isSimple = "is_simple"
-        case priority
-        case updatedAt = "updated_at"
-        case fields, categories, children, parent, blacklist
-        case countryCode = "country_code"
-        case acquiringAccess = "acquiring_access"
-        case params, promo, subject
-        case fastInput = "fast_input"
-        case categoryName = "category_name"
-        case categoryID = "category_id"
+        case picture
+        case desc = "description"
         case pictureURL = "picture_url"
     }
-}
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.title = try container.decode(String.self, forKey: .title)
+        self.id = try container.decode(Int.self, forKey: .id)
+        self.status = try? container.decode(Int.self, forKey: .status)
+        self.name = try container.decode(String.self, forKey: .name)
+      
+        self.parentID = try? container.decode(Int.self, forKey: .parentID)
+        self.picture = try? container.decode(String.self, forKey: .picture)
+    
+        self.desc = try? container.decode(String.self, forKey: .desc)
+        self.pictureURL = try? container.decode(String.self, forKey: .pictureURL)
 
+    }
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(status, forKey: .status)
+        try container.encode(title, forKey: .title)
+        try container.encode(name, forKey: .name)
+        try container.encode(parentID, forKey: .parentID)
+        try container.encode(picture, forKey: .picture)
+        try container.encode(desc, forKey: .desc)
+        try container.encode(pictureURL, forKey: .pictureURL)
+    }
+}
 // MARK: - Encode/decode helpers
 
 //class JSONNull: Codable, Hashable {
