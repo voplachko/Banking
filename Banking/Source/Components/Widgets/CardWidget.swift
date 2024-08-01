@@ -9,10 +9,11 @@ import SwiftUI
 
 struct CardWidget: View {
     
-    @State var pan: String = "4562112245957852"
-    @State var cvv: String = "696"
-    @State var cardHolder: String = "NIKITA NIKITIN"
-    @State var expDate: String = "06/2026"
+    @Binding var pan: String
+    @Binding var cvv: String
+    @Binding var cardHolder: String
+    @Binding var expDate: String
+
     @State var cardSystem: String = "Mastercard"
     @State var chip: String = "SIM"
     @State var waves: String = "ContactlessPayment"
@@ -96,8 +97,4 @@ struct CardWidget: View {
         
         return chunks
     }
-}
-
-#Preview {
-    CardWidget()
 }

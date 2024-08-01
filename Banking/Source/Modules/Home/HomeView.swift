@@ -6,13 +6,19 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct HomeView: View {
+    
+    @Query var cardItems: [CardItem]
     
     @AppStorage("kIsUserAuthorized") var isUserAuthorized: Bool = false
     @StateObject var model: HomeViewModel = .init()
     @State private var isShowTransactionHistoryView: Bool = false
     @State private var isShowAllCards: Bool = false
+    @State private var isShowSendMoney: Bool = false
+    @State private var isShowRequestMoney: Bool = false
+
     
     var body: some View {
         ScrollView {
@@ -49,17 +55,21 @@ struct HomeView: View {
                 
                 Spacer().frame(height: 32)
                 
-                CardWidget(pan: "535254252524525",
-                           cvv: "533",
-                           cardHolder: "Bogdan Shmatov",
-                           expDate: "11/2030",
-                           cardSystem: "Mastercard",
-                           chip: "SIM",
-                           waves: "ContactlessPayment")
-                .onTapGesture {
-                    withAnimation {
-                        isShowAllCards = true
-                    }
+//                CardWidget(pan: ,
+//                           cvv: "533",
+//                           cardHolder: "Bogdan Shmatov",
+//                           expDate: "11/2030",
+//                           cardSystem: "Mastercard",
+//                           chip: "SIM",
+//                           waves: "ContactlessPayment")
+//                .onTapGesture {
+//                    withAnimation {
+//                        isShowAllCards = true
+//                    }
+//                }
+                
+                Button("Show All Cards") {
+                    isShowAllCards = true
                 }
                 
                 VStack {
@@ -67,9 +77,14 @@ struct HomeView: View {
                         VStack {
                             Image("Sent")
                             
-                            Text("Sent")
+                            Text("Send")
                                 .font(.custom("Poppins", size: 14))
                                 .foregroundColor(Color.grayExtra)
+                        }
+                        .onTapGesture {
+                            withAnimation {
+                                isShowSendMoney = true
+                            }
                         }
                         
                         Spacer()
@@ -81,6 +96,12 @@ struct HomeView: View {
                                 .font(.custom("Poppins", size: 14))
                                 .foregroundColor(Color.grayExtra)
                         }
+                        .onTapGesture {
+                            withAnimation {
+                                isShowRequestMoney = true
+                            }
+                        }
+
                         
                         Spacer()
                         
@@ -151,6 +172,12 @@ struct HomeView: View {
         }
         .fullScreenCover(isPresented: $isShowAllCards) {
             AllCardsView()
+        }
+        .fullScreenCover(isPresented: $isShowSendMoney) {
+            SendMoneyView()
+        }
+        .fullScreenCover(isPresented: $isShowRequestMoney) {
+            RequestMoneyView()
         }
     }
     
