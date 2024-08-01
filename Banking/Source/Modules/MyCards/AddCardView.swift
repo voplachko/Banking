@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //
 //  AddCardView.swift
 //  Banking
@@ -7,16 +6,11 @@
 //
 
 import SwiftUI
-=======
-import SwiftUI
 import SwiftData
->>>>>>> c8f85e6 (31 07 2024)
 
 struct AddCardView: View {
     
     @Environment(\.dismiss) private var dismiss
-<<<<<<< HEAD
-=======
     @Environment(\.modelContext) private var modelContext
     
     @State private var cardHolderName: String = ""
@@ -24,16 +18,11 @@ struct AddCardView: View {
     @State private var cvv: String = ""
     @State private var cardNumber: String = ""
     @State private var showAlert: Bool = false
->>>>>>> c8f85e6 (31 07 2024)
     
     var body: some View {
         VStack {
             HStack {
-<<<<<<< HEAD
-                Button(action:  {
-=======
                 Button(action: {
->>>>>>> c8f85e6 (31 07 2024)
                     dismiss()
                 }) {
                     Image("Back_Icon")
@@ -57,33 +46,15 @@ struct AddCardView: View {
             .padding(.leading, 20)
             .padding(.trailing, 20)
             
-<<<<<<< HEAD
-            CardWidget(pan: "535254252524525",
-                       cvv: "533",
-                       cardHolder: "Bogdan Shmatov",
-                       expDate: "11/2030",
-=======
             CardWidget(pan: $cardNumber,
                        cvv: $cvv,
                        cardHolder: $cardHolderName,
                        expDate: $expiryDate,
->>>>>>> c8f85e6 (31 07 2024)
                        cardSystem: "Mastercard",
                        chip: "SIM",
                        waves: "ContactlessPayment")
             .padding(.top, 30)
             
-<<<<<<< HEAD
-            VStack(spacing: 21) {
-                
-            }
-            
-            Spacer()
-            
-        }
-        .background(Color.bankingPrimary)
-    }
-=======
             VStack() {
                 
                 Text("Cardholer Name")
@@ -221,7 +192,6 @@ struct AddCardView: View {
         
         modelContext.insert(cardItem)
     }
->>>>>>> c8f85e6 (31 07 2024)
 }
 
 #Preview {

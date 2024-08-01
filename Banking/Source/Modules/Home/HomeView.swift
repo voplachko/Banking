@@ -6,27 +6,19 @@
 //
 
 import SwiftUI
-<<<<<<< HEAD
-
-struct HomeView: View {
-    
-=======
 import SwiftData
 
 struct HomeView: View {
     
     @Query var cardItems: [CardItem]
     
->>>>>>> c8f85e6 (31 07 2024)
     @AppStorage("kIsUserAuthorized") var isUserAuthorized: Bool = false
     @StateObject var model: HomeViewModel = .init()
     @State private var isShowTransactionHistoryView: Bool = false
     @State private var isShowAllCards: Bool = false
-<<<<<<< HEAD
-=======
     @State private var isShowSendMoney: Bool = false
     @State private var isShowRequestMoney: Bool = false
->>>>>>> c8f85e6 (31 07 2024)
+
     
     var body: some View {
         ScrollView {
@@ -63,19 +55,6 @@ struct HomeView: View {
                 
                 Spacer().frame(height: 32)
                 
-<<<<<<< HEAD
-                CardWidget(pan: "535254252524525",
-                           cvv: "533",
-                           cardHolder: "Bogdan Shmatov",
-                           expDate: "11/2030",
-                           cardSystem: "Mastercard",
-                           chip: "SIM",
-                           waves: "ContactlessPayment")
-                .onTapGesture {
-                    withAnimation {
-                        isShowAllCards = true
-                    }
-=======
 //                CardWidget(pan: ,
 //                           cvv: "533",
 //                           cardHolder: "Bogdan Shmatov",
@@ -91,7 +70,6 @@ struct HomeView: View {
                 
                 Button("Show All Cards") {
                     isShowAllCards = true
->>>>>>> c8f85e6 (31 07 2024)
                 }
                 
                 VStack {
@@ -99,12 +77,6 @@ struct HomeView: View {
                         VStack {
                             Image("Sent")
                             
-<<<<<<< HEAD
-                            Text("Sent")
-                                .font(.custom("Poppins", size: 14))
-                                .foregroundColor(Color.grayExtra)
-                        }
-=======
                             Text("Send")
                                 .font(.custom("Poppins", size: 14))
                                 .foregroundColor(Color.grayExtra)
@@ -114,7 +86,6 @@ struct HomeView: View {
                                 isShowSendMoney = true
                             }
                         }
->>>>>>> c8f85e6 (31 07 2024)
                         
                         Spacer()
                         
@@ -125,14 +96,12 @@ struct HomeView: View {
                                 .font(.custom("Poppins", size: 14))
                                 .foregroundColor(Color.grayExtra)
                         }
-<<<<<<< HEAD
-=======
                         .onTapGesture {
                             withAnimation {
                                 isShowRequestMoney = true
                             }
                         }
->>>>>>> c8f85e6 (31 07 2024)
+
                         
                         Spacer()
                         
@@ -204,15 +173,12 @@ struct HomeView: View {
         .fullScreenCover(isPresented: $isShowAllCards) {
             AllCardsView()
         }
-<<<<<<< HEAD
-=======
         .fullScreenCover(isPresented: $isShowSendMoney) {
             SendMoneyView()
         }
         .fullScreenCover(isPresented: $isShowRequestMoney) {
             RequestMoneyView()
         }
->>>>>>> c8f85e6 (31 07 2024)
     }
     
     @ViewBuilder

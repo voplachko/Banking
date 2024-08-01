@@ -21,8 +21,6 @@ extension Color {
     
     static var toolbarColor =
     Color(UIColor(red: 39 / 255, green: 39 / 255, blue: 58 / 255, alpha: 1.0))
-<<<<<<< HEAD
-=======
     
     static var blockColor =
     Color(UIColor(red: 30 / 255, green: 30 / 255, blue: 45 / 255, alpha: 1.0))
@@ -32,5 +30,4 @@ extension Color {
     
     static var currencyRedColor =
     Color(UIColor(red: 255 / 255, green: 63 / 255, blue: 96 / 255, alpha: 1.0))
->>>>>>> c8f85e6 (31 07 2024)
 }

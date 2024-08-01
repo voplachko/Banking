@@ -13,10 +13,7 @@ struct BankingApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
-<<<<<<< HEAD
-=======
             CardItem.self
->>>>>>> c8f85e6 (31 07 2024)
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
