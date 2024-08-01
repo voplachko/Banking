@@ -9,10 +9,17 @@ import SwiftUI
 
 struct CardWidget: View {
     
+<<<<<<< HEAD
     @State var pan: String = "4562112245957852"
     @State var cvv: String = "696"
     @State var cardHolder: String = "NIKITA NIKITIN"
     @State var expDate: String = "06/2026"
+=======
+    @Binding var pan: String
+    @Binding var cvv: String
+    @Binding var cardHolder: String
+    @Binding var expDate: String
+>>>>>>> c8f85e6 (31 07 2024)
     @State var cardSystem: String = "Mastercard"
     @State var chip: String = "SIM"
     @State var waves: String = "ContactlessPayment"
@@ -98,6 +105,13 @@ struct CardWidget: View {
     }
 }
 
+<<<<<<< HEAD
 #Preview {
     CardWidget()
+=======
+struct CardWidget_Previews: PreviewProvider {
+  static var previews: some View {
+      CardWidget(pan: .constant("35425235252"), cvv: .constant("894"), cardHolder: .constant("Boom Boomi4"), expDate: .constant("09/2099"))
+  }
+>>>>>>> c8f85e6 (31 07 2024)
 }

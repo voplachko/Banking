@@ -63,6 +63,12 @@
 		5AFCC4742C57BF9100DD311A /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5AFCC45E2C57BF9100DD311A /* Poppins-Thin.ttf */; };
 		5AFCC4752C57BF9100DD311A /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5AFCC45F2C57BF9100DD311A /* Poppins-ThinItalic.ttf */; };
 		5AFCC4762C57BF9100DD311A /* Poppins-VariableFont_wght.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AFCC4602C57BF9100DD311A /* Poppins-VariableFont_wght.otf */; };
+<<<<<<< HEAD
+=======
+		F625360A2C5985940050A1F6 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62536092C5985940050A1F6 /* CardItem.swift */; };
+		F625360D2C5A66960050A1F6 /* SendMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F625360C2C5A66960050A1F6 /* SendMoneyView.swift */; };
+		F625360F2C5A66B30050A1F6 /* RequestMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F625360E2C5A66B30050A1F6 /* RequestMoneyView.swift */; };
+>>>>>>> c8f85e6 (31 07 2024)
 		F65EBE6C2C3EB52800C0230F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F65EBE6B2C3EB52800C0230F /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +150,12 @@
 		5AFCC45E2C57BF9100DD311A /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		5AFCC45F2C57BF9100DD311A /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
 		5AFCC4602C57BF9100DD311A /* Poppins-VariableFont_wght.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-VariableFont_wght.otf"; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		F62536092C5985940050A1F6 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		F625360C2C5A66960050A1F6 /* SendMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyView.swift; sourceTree = "<group>"; };
+		F625360E2C5A66B30050A1F6 /* RequestMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMoneyView.swift; sourceTree = "<group>"; };
+>>>>>>> c8f85e6 (31 07 2024)
 		F65EBE5F2C3EB51A00C0230F /* Banking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65EBE6B2C3EB52800C0230F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F65EBED02C404A8F00C0230F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -288,6 +300,10 @@
 		5A65F9822C57BD4B00348312 /* MyCards */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+=======
+				F62536082C59857C0050A1F6 /* Models */,
+>>>>>>> c8f85e6 (31 07 2024)
 				5A65F9802C57BD4B00348312 /* AddCardView.swift */,
 				5A65F9812C57BD4B00348312 /* AllCardsView.swift */,
 			);
@@ -321,6 +337,10 @@
 		5A65F9892C57BD4B00348312 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+=======
+				F625360B2C5A65F20050A1F6 /* Transfers */,
+>>>>>>> c8f85e6 (31 07 2024)
 				5A65F9752C57BD4B00348312 /* Authorization */,
 				5A65F97F2C57BD4B00348312 /* Home */,
 				5A65F9822C57BD4B00348312 /* MyCards */,
@@ -409,6 +429,26 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+=======
+		F62536082C59857C0050A1F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F62536092C5985940050A1F6 /* CardItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F625360B2C5A65F20050A1F6 /* Transfers */ = {
+			isa = PBXGroup;
+			children = (
+				F625360C2C5A66960050A1F6 /* SendMoneyView.swift */,
+				F625360E2C5A66B30050A1F6 /* RequestMoneyView.swift */,
+			);
+			path = Transfers;
+			sourceTree = "<group>";
+		};
+>>>>>>> c8f85e6 (31 07 2024)
 		F65EBE562C3EB51A00C0230F = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +579,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A65F9B02C57BD4B00348312 /* CustomTabView.swift in Sources */,
+<<<<<<< HEAD
+=======
+				F625360F2C5A66B30050A1F6 /* RequestMoneyView.swift in Sources */,
+>>>>>>> c8f85e6 (31 07 2024)
 				5A65F9C82C57BD4B00348312 /* TransactionHistoryView.swift in Sources */,
 				5A65F9B52C57BD4B00348312 /* CardWidget.swift in Sources */,
 				5A65F9C22C57BD4B00348312 /* SecondScreen.swift in Sources */,
@@ -556,12 +600,20 @@
 				5A65F9CE2C57BD4B00348312 /* NetworkManager.swift in Sources */,
 				5A65F9C42C57BD4B00348312 /* AddCardView.swift in Sources */,
 				5A65F9B32C57BD4B00348312 /* UserDefaultsWrapper.swift in Sources */,
+<<<<<<< HEAD
+=======
+				F625360D2C5A66960050A1F6 /* SendMoneyView.swift in Sources */,
+>>>>>>> c8f85e6 (31 07 2024)
 				5A65F9CB2C57BD4B00348312 /* AuthWorker.swift in Sources */,
 				5A65F9C72C57BD4B00348312 /* ProfileView.swift in Sources */,
 				5A65F9AF2C57BD4B00348312 /* Color + Ext.swift in Sources */,
 				5A65F9E52C57BD4B00348312 /* Color.swift in Sources */,
 				5A65F9B72C57BD4B00348312 /* AuthorizationView.swift in Sources */,
 				5A65F9BA2C57BD4B00348312 /* RegistrationViewModel.swift in Sources */,
+<<<<<<< HEAD
+=======
+				F625360A2C5985940050A1F6 /* CardItem.swift in Sources */,
+>>>>>>> c8f85e6 (31 07 2024)
 				5A65F9BF2C57BD4B00348312 /* FourthScreen.swift in Sources */,
 				5A65F9C92C57BD4B00348312 /* UserAccount.swift in Sources */,
 				5A65F9C62C57BD4B00348312 /* OnboardingView.swift in Sources */,

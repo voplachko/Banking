@@ -6,9 +6,18 @@
 //
 
 import SwiftUI
+<<<<<<< HEAD
 
 struct AllCardsView: View {
     
+=======
+import SwiftData
+
+struct AllCardsView: View {
+    
+    @Query var cardItems: [CardItem]
+    
+>>>>>>> c8f85e6 (31 07 2024)
     @Environment(\.dismiss) private var dismiss
     @State private var isShowAddCard: Bool = false
     
@@ -39,6 +48,7 @@ struct AllCardsView: View {
             .padding(.leading, 20)
             .padding(.trailing, 20)
             
+<<<<<<< HEAD
             ScrollView {
                 CardWidget(pan: "535254252524525",
                            cvv: "533",
@@ -58,6 +68,22 @@ struct AllCardsView: View {
                            waves: "")
                 .padding(.top, 24)
             }
+=======
+//            ScrollView {
+//                ForEach(cardItems, id: \.id) { card in
+//                    CardWidget(pan: card.pan,
+//                               cvv: card.cvv,
+//                               cardHolder: card.cardHolder,
+//                               expDate: card.expDate,
+//                               cardSystem: "Mastercard",
+//                               chip: "SIM",
+//                               waves: "ContactlessPayment")
+//                    .padding(.top, 30)
+//                }
+//            }
+            
+            Spacer()
+>>>>>>> c8f85e6 (31 07 2024)
             
             Button(action: {
                 withAnimation {
@@ -86,4 +112,8 @@ struct AllCardsView: View {
 
 #Preview {
     AllCardsView()
+<<<<<<< HEAD
+=======
+        .modelContainer(for: CardItem.self)
+>>>>>>> c8f85e6 (31 07 2024)
 }
