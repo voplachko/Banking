@@ -20,6 +20,10 @@ struct RequestMoneyView: View {
     @State private var day: String = ""
     @State private var month: String = ""
     @State private var year: String = ""
+    @State private var selectedCurrency: String = "KZT"
+    @State private var showCurrencyPicker: Bool = false
+    
+    let currencies = ["KZT", "USD", "EUR", "GBP", "RUB"]
     
     var body: some View {
         VStack {
@@ -48,144 +52,164 @@ struct RequestMoneyView: View {
             .padding(.leading, 20)
             .padding(.trailing, 20)
             
-            
-            VStack {
-                
-                Text("Payer Name")
-                    .font(.custom("Poppins", size: 14))
-                    .fontWeight(.regular)
-                    .foregroundColor(.grayExtra)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                HStack {
+            ScrollView {
+                VStack {
                     
-                    Image("Icon_User")
+                    Text("Payer Name")
+                        .font(.custom("Poppins", size: 14))
+                        .fontWeight(.regular)
+                        .foregroundColor(.grayExtra)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    HStack {
                         
-                    TextField("", text: $payerName)
-                        .font(.custom("Poppins", size: 14))
-                        .fontWeight(.regular)
-                        .foregroundStyle(.white)
-                }
-                
-                Divider()
-                
-                Spacer().frame(height: 21)
-                
-                Text("Email Address")
-                    .font(.custom("Poppins", size: 14))
-                    .fontWeight(.regular)
-                    .foregroundColor(.grayExtra)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                HStack {
-                    
-                    Image("Icon_Email")
+                        Image("Icon_User")
                         
-                    TextField("", text: $emailAddress)
+                        TextField("", text: $payerName)
+                            .font(.custom("Poppins", size: 14))
+                            .fontWeight(.regular)
+                            .foregroundStyle(.white)
+                    }
+                    
+                    Divider()
+                    
+                    Spacer().frame(height: 21)
+                    
+                    Text("Email Address")
                         .font(.custom("Poppins", size: 14))
                         .fontWeight(.regular)
-                        .foregroundStyle(.white)
-                }
-                
-                Divider()
+                        .foregroundColor(.grayExtra)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    HStack {
                         
-                Spacer().frame(height: 21)
-                
-                Text("Description")
-                    .font(.custom("Poppins", size: 14))
-                    .fontWeight(.regular)
-                    .foregroundColor(.grayExtra)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                HStack {
-                    
-                    Image("Icon_User")
+                        Image("Icon_Email")
                         
-                    TextField("", text: $description)
+                        TextField("", text: $emailAddress)
+                            .font(.custom("Poppins", size: 14))
+                            .fontWeight(.regular)
+                            .foregroundStyle(.white)
+                    }
+                    
+                    Divider()
+                    
+                    Spacer().frame(height: 21)
+                    
+                    Text("Description")
                         .font(.custom("Poppins", size: 14))
                         .fontWeight(.regular)
-                        .foregroundStyle(.white)
+                        .foregroundColor(.grayExtra)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    HStack {
+                        
+                        Image("Icon_User")
+                        
+                        TextField("", text: $description)
+                            .font(.custom("Poppins", size: 14))
+                            .fontWeight(.regular)
+                            .foregroundStyle(.white)
+                    }
+                    
+                    Divider()
+                    
+                    Spacer().frame(height: 21)
+                    
+                    Text("Monthly Due By")
+                        .font(.custom("Poppins", size: 14))
+                        .fontWeight(.regular)
+                        .foregroundColor(.grayExtra)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    HStack {
+                        TextField("dd", text: $day)
+                            .font(.custom("Poppins", size: 14))
+                            .fontWeight(.regular)
+                            .foregroundStyle(.white)
+                        
+                        Spacer()
+                        
+                        TextField("mm", text: $month)
+                            .font(.custom("Poppins", size: 14))
+                            .fontWeight(.regular)
+                            .foregroundStyle(.white)
+                        
+                        Spacer()
+                        
+                        TextField("yy", text: $year)
+                            .font(.custom("Poppins", size: 14))
+                            .fontWeight(.regular)
+                            .foregroundStyle(.white)
+                    }
+                    
+                    Spacer().frame(height: 30)
+                    
                 }
+                .padding(.leading, 20)
+                .padding(.trailing, 20)
+                .padding(.top, 30)
                 
-                Divider()
-                
-                Spacer().frame(height: 21)
-                
-                Text("Monthly Due By")
-                    .font(.custom("Poppins", size: 14))
-                    .fontWeight(.regular)
-                    .foregroundColor(.grayExtra)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                HStack {
-                    TextField("dd", text: $day)
-                        .font(.custom("Poppins", size: 14))
-                        .fontWeight(.regular)
-                        .foregroundStyle(.white)
+                VStack {
+                    HStack {
+                        Text("Enter Your Amount")
+                            .font(.custom("Poppins", size: 11))
+                            .fontWeight(.regular)
+                            .foregroundStyle(Color.currencyColor)
+                            .padding(.top, 30)
+                            .padding(.leading, 12)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            showCurrencyPicker.toggle()
+                        }) {
+                            Text("Change Currency?")
+                                .font(.custom("Poppins", size: 11))
+                                .fontWeight(.regular)
+                                .foregroundStyle(Color.currencyRedColor)
+                                .padding(.top, 30)
+                                .padding(.trailing, 12)
+                        }
+                    }
                     
-                    Spacer()
+                    if showCurrencyPicker {
+                        Picker("Select Currency", selection: $selectedCurrency) {
+                            ForEach(currencies, id: \.self) { currency in
+                                Text(currency).tag(currency)
+                                    .foregroundColor(Color.currencyColor)
+                                    .font(.custom("Poppins", size: 14))
+                                    .fontWeight(.semibold)
+                            }
+                        }
+                        .pickerStyle(.wheel)
+                        .background(Color.blockColor)
+                        .cornerRadius(10)
+                        .padding(.horizontal, 20)
+                    }
                     
-                    TextField("mm", text: $month)
-                        .font(.custom("Poppins", size: 14))
-                        .fontWeight(.regular)
-                        .foregroundStyle(.white)
-                    
-                    Spacer()
-                    
-                    TextField("yy", text: $year)
-                        .font(.custom("Poppins", size: 14))
-                        .fontWeight(.regular)
-                        .foregroundStyle(.white)
+                    HStack {
+                        Text(selectedCurrency)
+                            .font(.custom("Poppins", size: 24))
+                            .fontWeight(.semibold)
+                            .foregroundStyle(Color.currencyColor)
+                        
+                        
+                        TextField("0.0", text: $moneyAmount)
+                            .font(.custom("Poppins", size: 24))
+                            .fontWeight(.semibold)
+                            .foregroundStyle(.white)
+                    }
+                    .padding(.horizontal, 12)
+                    .padding(.top, 15)
+                    .padding(.bottom, 30)
                 }
-                
-                Spacer().frame(height: 30)
-                    
+                .padding(.horizontal, 32)
+                .background(
+                    Color.blockColor
+                        .cornerRadius(14)
+                        .padding(.horizontal, 20)
+                )
             }
-            .padding(.leading, 20)
-            .padding(.trailing, 20)
-            .padding(.top, 30)
-            
-            VStack {
-                HStack {
-                    Text("Enter Your Amount")
-                        .font(.custom("Poppins", size: 11))
-                        .fontWeight(.regular)
-                        .foregroundStyle(Color.currencyColor)
-                        .padding(.top, 30)
-                        .padding(.leading, 12)
-                    
-                    Spacer()
-                    
-                    Text("Change Currency?")
-                        .font(.custom("Poppins", size: 11))
-                        .fontWeight(.regular)
-                        .foregroundStyle(Color.currencyRedColor)
-                        .padding(.top, 30)
-                        .padding(.trailing, 12)
-                }
-                
-                HStack {
-                    Text("KZT")
-                        .font(.custom("Poppins", size: 24))
-                        .fontWeight(.semibold)
-                        .foregroundStyle(Color.currencyColor)
-                        
-                    
-                    TextField("0.0", text: $moneyAmount)
-                        .font(.custom("Poppins", size: 24))
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.white)
-                }
-                .padding(.horizontal, 12)
-                .padding(.top, 15)
-                .padding(.bottom, 30)
-            }
-            .padding(.horizontal, 32)
-            .background(
-                Color.blockColor
-                    .cornerRadius(14)
-                    .padding(.horizontal, 20)
-            )
             
             
             Spacer()

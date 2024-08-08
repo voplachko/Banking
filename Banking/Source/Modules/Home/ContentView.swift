@@ -30,19 +30,19 @@ struct ContentView: View {
                             Text("Home")
                         }
                     
-                    SecondScreen()
+                    MyCardsView(transactions: [])
                         .tabItem {
                             Image(systemName: "creditcard")
                             Text("My Cards")
                         }
                     
-                    ThirdScreen()
+                    StatsView()
                         .tabItem {
                             Image(systemName: "chart.bar")
                             Text("Statistics")
                         }
                     
-                    FourthScreen()
+                    SettingsView()
                         .tabItem {
                             Image(systemName: "gearshape")
                             Text("Settings")

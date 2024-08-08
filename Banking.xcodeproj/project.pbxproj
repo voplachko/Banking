@@ -23,11 +23,11 @@
 		5A0AB66E2C5B8D4E00B87EE6 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB6232C5B8D4E00B87EE6 /* Authorization.swift */; };
 		5A0AB66F2C5B8D4E00B87EE6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB6252C5B8D4E00B87EE6 /* Item.swift */; };
 		5A0AB6702C5B8D4E00B87EE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB6272C5B8D4E00B87EE6 /* ContentView.swift */; };
-		5A0AB6712C5B8D4E00B87EE6 /* FourthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB6282C5B8D4E00B87EE6 /* FourthScreen.swift */; };
+		5A0AB6712C5B8D4E00B87EE6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB6282C5B8D4E00B87EE6 /* SettingsView.swift */; };
 		5A0AB6722C5B8D4E00B87EE6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB6292C5B8D4E00B87EE6 /* HomeView.swift */; };
 		5A0AB6732C5B8D4E00B87EE6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB62A2C5B8D4E00B87EE6 /* HomeViewModel.swift */; };
-		5A0AB6742C5B8D4E00B87EE6 /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB62B2C5B8D4E00B87EE6 /* SecondScreen.swift */; };
-		5A0AB6752C5B8D4E00B87EE6 /* ThirdScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB62C2C5B8D4E00B87EE6 /* ThirdScreen.swift */; };
+		5A0AB6742C5B8D4E00B87EE6 /* MyCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB62B2C5B8D4E00B87EE6 /* MyCardsView.swift */; };
+		5A0AB6752C5B8D4E00B87EE6 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB62C2C5B8D4E00B87EE6 /* StatsView.swift */; };
 		5A0AB6762C5B8D4E00B87EE6 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB62E2C5B8D4E00B87EE6 /* CardItem.swift */; };
 		5A0AB6772C5B8D4E00B87EE6 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB6302C5B8D4E00B87EE6 /* AddCardView.swift */; };
 		5A0AB6782C5B8D4E00B87EE6 /* AllCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB6312C5B8D4E00B87EE6 /* AllCardsView.swift */; };
@@ -86,11 +86,11 @@
 		5A0AB6232C5B8D4E00B87EE6 /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		5A0AB6252C5B8D4E00B87EE6 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		5A0AB6272C5B8D4E00B87EE6 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		5A0AB6282C5B8D4E00B87EE6 /* FourthScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthScreen.swift; sourceTree = "<group>"; };
+		5A0AB6282C5B8D4E00B87EE6 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5A0AB6292C5B8D4E00B87EE6 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5A0AB62A2C5B8D4E00B87EE6 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		5A0AB62B2C5B8D4E00B87EE6 /* SecondScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
-		5A0AB62C2C5B8D4E00B87EE6 /* ThirdScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdScreen.swift; sourceTree = "<group>"; };
+		5A0AB62B2C5B8D4E00B87EE6 /* MyCardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCardsView.swift; sourceTree = "<group>"; };
+		5A0AB62C2C5B8D4E00B87EE6 /* StatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		5A0AB62E2C5B8D4E00B87EE6 /* CardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		5A0AB6302C5B8D4E00B87EE6 /* AddCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
 		5A0AB6312C5B8D4E00B87EE6 /* AllCardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCardsView.swift; sourceTree = "<group>"; };
@@ -233,11 +233,11 @@
 			children = (
 				5A0AB6262C5B8D4E00B87EE6 /* Models */,
 				5A0AB6272C5B8D4E00B87EE6 /* ContentView.swift */,
-				5A0AB6282C5B8D4E00B87EE6 /* FourthScreen.swift */,
+				5A0AB6282C5B8D4E00B87EE6 /* SettingsView.swift */,
 				5A0AB6292C5B8D4E00B87EE6 /* HomeView.swift */,
 				5A0AB62A2C5B8D4E00B87EE6 /* HomeViewModel.swift */,
-				5A0AB62B2C5B8D4E00B87EE6 /* SecondScreen.swift */,
-				5A0AB62C2C5B8D4E00B87EE6 /* ThirdScreen.swift */,
+				5A0AB62B2C5B8D4E00B87EE6 /* MyCardsView.swift */,
+				5A0AB62C2C5B8D4E00B87EE6 /* StatsView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -516,7 +516,7 @@
 				5A0AB6732C5B8D4E00B87EE6 /* HomeViewModel.swift in Sources */,
 				5A0AB67C2C5B8D4E00B87EE6 /* RequestMoneyView.swift in Sources */,
 				5A0AB67B2C5B8D4E00B87EE6 /* TransactionHistoryView.swift in Sources */,
-				5A0AB6752C5B8D4E00B87EE6 /* ThirdScreen.swift in Sources */,
+				5A0AB6752C5B8D4E00B87EE6 /* StatsView.swift in Sources */,
 				5A0AB6822C5B8D4E00B87EE6 /* RegistrationWorker.swift in Sources */,
 				5A0AB6812C5B8D4E00B87EE6 /* HistoryWorker.swift in Sources */,
 				5A0AB6632C5B8D4E00B87EE6 /* CustomTabView.swift in Sources */,
@@ -525,9 +525,9 @@
 				5A0AB6652C5B8D4E00B87EE6 /* UnderlineTextField.swift in Sources */,
 				5A0AB6642C5B8D4E00B87EE6 /* SafeArea.swift in Sources */,
 				5A0AB6612C5B8D4E00B87EE6 /* BankingApp.swift in Sources */,
-				5A0AB6712C5B8D4E00B87EE6 /* FourthScreen.swift in Sources */,
+				5A0AB6712C5B8D4E00B87EE6 /* SettingsView.swift in Sources */,
 				5A0AB66E2C5B8D4E00B87EE6 /* Authorization.swift in Sources */,
-				5A0AB6742C5B8D4E00B87EE6 /* SecondScreen.swift in Sources */,
+				5A0AB6742C5B8D4E00B87EE6 /* MyCardsView.swift in Sources */,
 				5A0AB6692C5B8D4E00B87EE6 /* AuthorizationModel.swift in Sources */,
 				5A0AB67E2C5B8D4E00B87EE6 /* UserAccount.swift in Sources */,
 				5A0AB69A2C5B8D4E00B87EE6 /* Color.swift in Sources */,

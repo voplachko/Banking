@@ -31,7 +31,7 @@ struct AddCardView: View {
                 }
                 Spacer()
                 
-                Text("All Cards")
+                Text("Add Card")
                     .font(.custom("Poppins", size: 18))
                     .fontWeight(.medium)
                     .foregroundStyle(.white)

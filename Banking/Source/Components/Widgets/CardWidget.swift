@@ -65,7 +65,22 @@ struct CardWidget: View {
                 }
                 
                 Spacer()
-                Image(cardSystem)
+                // Как определить какая платежная система?
+                // виса, мастеркард, мир или американ экспресс?
+                
+                // Visa - начинаются с цифры - "4"
+                // MasterCard с цифры "5"
+                // American Express с цифры "3"
+                
+                let panFirstSymbol = pan.prefix(1)
+                
+                switch panFirstSymbol {
+                case "5": Image("Mastercard")
+                case "4": Image("visa")
+                default: Image("amex")
+                }
+                
+                
             }
             .padding(.bottom, 22)
             .font(.custom("Inter", size: 13))
