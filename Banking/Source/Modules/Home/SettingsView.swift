@@ -240,7 +240,8 @@ struct LanguageSelectionView: View {
             }) {
                 HStack {
                     Text(language)
-                        .foregroundColor(.black)
+                        .font(.custom("Poppins", size: 14))
+                        .foregroundColor(.white)
                     
                     Spacer()
                     
@@ -250,8 +251,11 @@ struct LanguageSelectionView: View {
                     }
                 }
             }
+            .listRowBackground(Color.bankingPrimary)
         }
-        .navigationTitle("Select Language")
+        .background(Color.bankingPrimary.edgesIgnoringSafeArea(.all))
+//        .navigationTitle("Select Language")
+        .listStyle(PlainListStyle())
     }
 }
 
