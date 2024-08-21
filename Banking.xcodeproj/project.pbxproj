@@ -67,6 +67,11 @@
 		5A0AB69A2C5B8D4E00B87EE6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0AB65E2C5B8D4E00B87EE6 /* Color.swift */; };
 		5A0AB69B2C5B8D4E00B87EE6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0AB65F2C5B8D4E00B87EE6 /* Launch Screen.storyboard */; };
 		F65EBE6C2C3EB52800C0230F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F65EBE6B2C3EB52800C0230F /* Preview Assets.xcassets */; };
+		F6D3E56A2C64A95800F2A61B /* CardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3E5692C64A95800F2A61B /* CardHelper.swift */; };
+		F6D3E56E2C67783D00F2A61B /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3E56D2C67783D00F2A61B /* SuccessView.swift */; };
+		F6D3E5712C6B953700F2A61B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F6D3E5702C6B953700F2A61B /* Lottie */; };
+		F6D3E5742C6E743900F2A61B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3E5732C6E743900F2A61B /* LottieView.swift */; };
+		F6D3E5782C6E831200F2A61B /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3E5772C6E831200F2A61B /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +137,10 @@
 		F65EBE5F2C3EB51A00C0230F /* Banking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65EBE6B2C3EB52800C0230F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F65EBED02C404A8F00C0230F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F6D3E5692C64A95800F2A61B /* CardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHelper.swift; sourceTree = "<group>"; };
+		F6D3E56D2C67783D00F2A61B /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		F6D3E5732C6E743900F2A61B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		F6D3E5772C6E831200F2A61B /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D3E5712C6B953700F2A61B /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +171,8 @@
 				5A0AB6132C5B8D4E00B87EE6 /* SafeArea.swift */,
 				5A0AB6142C5B8D4E00B87EE6 /* UnderlineTextField.swift */,
 				5A0AB6152C5B8D4E00B87EE6 /* UserDefaultsWrapper.swift */,
+				F6D3E5692C64A95800F2A61B /* CardHelper.swift */,
+				F6D3E5772C6E831200F2A61B /* DateFormatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +301,7 @@
 			children = (
 				5A0AB6392C5B8D4E00B87EE6 /* RequestMoneyView.swift */,
 				5A0AB63A2C5B8D4E00B87EE6 /* SendMoneyView.swift */,
+				F6D3E56D2C67783D00F2A61B /* SuccessView.swift */,
 			);
 			path = Transfers;
 			sourceTree = "<group>";
@@ -377,6 +390,7 @@
 		5A0AB6602C5B8D4E00B87EE6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F6D3E5722C6E740500F2A61B /* Animations */,
 				5A0AB65C2C5B8D4E00B87EE6 /* Fonts */,
 				5A0AB65D2C5B8D4E00B87EE6 /* Assets.xcassets */,
 				5A0AB65E2C5B8D4E00B87EE6 /* Color.swift */,
@@ -421,6 +435,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F6D3E5722C6E740500F2A61B /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				F6D3E5732C6E743900F2A61B /* LottieView.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -437,6 +459,9 @@
 			dependencies = (
 			);
 			name = Banking;
+			packageProductDependencies = (
+				F6D3E5702C6B953700F2A61B /* Lottie */,
+			);
 			productName = Banking;
 			productReference = F65EBE5F2C3EB51A00C0230F /* Banking.app */;
 			productType = "com.apple.product-type.application";
@@ -465,6 +490,9 @@
 				Base,
 			);
 			mainGroup = F65EBE562C3EB51A00C0230F;
+			packageReferences = (
+				F6D3E56F2C6B953600F2A61B /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = F65EBE602C3EB51A00C0230F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -514,12 +542,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A0AB6732C5B8D4E00B87EE6 /* HomeViewModel.swift in Sources */,
+				F6D3E56A2C64A95800F2A61B /* CardHelper.swift in Sources */,
 				5A0AB67C2C5B8D4E00B87EE6 /* RequestMoneyView.swift in Sources */,
 				5A0AB67B2C5B8D4E00B87EE6 /* TransactionHistoryView.swift in Sources */,
 				5A0AB6752C5B8D4E00B87EE6 /* StatsView.swift in Sources */,
 				5A0AB6822C5B8D4E00B87EE6 /* RegistrationWorker.swift in Sources */,
 				5A0AB6812C5B8D4E00B87EE6 /* HistoryWorker.swift in Sources */,
 				5A0AB6632C5B8D4E00B87EE6 /* CustomTabView.swift in Sources */,
+				F6D3E5742C6E743900F2A61B /* LottieView.swift in Sources */,
 				5A0AB6682C5B8D4E00B87EE6 /* CardWidget.swift in Sources */,
 				5A0AB6702C5B8D4E00B87EE6 /* ContentView.swift in Sources */,
 				5A0AB6652C5B8D4E00B87EE6 /* UnderlineTextField.swift in Sources */,
@@ -535,11 +565,13 @@
 				5A0AB6772C5B8D4E00B87EE6 /* AddCardView.swift in Sources */,
 				5A0AB6722C5B8D4E00B87EE6 /* HomeView.swift in Sources */,
 				5A0AB67F2C5B8D4E00B87EE6 /* UserHistory.swift in Sources */,
+				F6D3E5782C6E831200F2A61B /* DateFormatter.swift in Sources */,
 				5A0AB67A2C5B8D4E00B87EE6 /* ProfileView.swift in Sources */,
 				5A0AB6662C5B8D4E00B87EE6 /* UserDefaultsWrapper.swift in Sources */,
 				5A0AB6622C5B8D4E00B87EE6 /* Color + Ext.swift in Sources */,
 				5A0AB66A2C5B8D4E00B87EE6 /* AuthorizationView.swift in Sources */,
 				5A0AB6762C5B8D4E00B87EE6 /* CardItem.swift in Sources */,
+				F6D3E56E2C67783D00F2A61B /* SuccessView.swift in Sources */,
 				5A0AB6802C5B8D4E00B87EE6 /* AuthWorker.swift in Sources */,
 				5A0AB67D2C5B8D4E00B87EE6 /* SendMoneyView.swift in Sources */,
 				5A0AB6792C5B8D4E00B87EE6 /* OnboardingView.swift in Sources */,
@@ -760,6 +792,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6D3E56F2C6B953600F2A61B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6D3E5702C6B953700F2A61B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6D3E56F2C6B953600F2A61B /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F65EBE572C3EB51A00C0230F /* Project object */;
 }

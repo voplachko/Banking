@@ -25,7 +25,7 @@ class NetworkManager {
     
     static var shared = NetworkManager()
     
-    let BASE_URL = "https://api.yii2-stage.test.wooppay.com"
+    let BASE_URL = "https://api-core.test.wooppay.com"
     
     private init() {}
     

@@ -28,7 +28,7 @@ struct HomeView: View {
                         .resizable()
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
-                        .padding(.leading, 20)
+                        
                     
                     VStack(alignment: .leading) {
                         
@@ -50,27 +50,34 @@ struct HomeView: View {
                         .frame(width: 42, height: 42)
                     
                 }
-                .padding(.leading, 20)
-                .padding(.trailing, 20)
+                .padding(.horizontal, 20)
                 
-                Spacer().frame(height: 32)
+//                Spacer().frame(height: 32)
                 
-//                CardWidget(pan: ,
-//                           cvv: "533",
-//                           cardHolder: "Bogdan Shmatov",
-//                           expDate: "11/2030",
-//                           cardSystem: "Mastercard",
-//                           chip: "SIM",
-//                           waves: "ContactlessPayment")
-//                .onTapGesture {
-//                    withAnimation {
-//                        isShowAllCards = true
-//                    }
-//                }
-                
-                Button("Show All Cards") {
-                    isShowAllCards = true
+                TabView {
+                    ForEach(cardItems, id: \.id) { card in
+                        CardWidget(pan: card.pan,
+                                   cvv: card.cvv,
+                                   cardHolder: card.cardHolder,
+                                   expDate: card.expDate,
+                                   cardSystem: "Mastercard",
+                                   chip: "SIM",
+                                   waves: "ContectlessPayment")
+                        .tag(card.pan)
+                        .onTapGesture {
+                            withAnimation {
+                                isShowAllCards = true
+                            }
+                        }
+                    }
                 }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
+                .edgesIgnoringSafeArea(.all)
+                .frame(minHeight: 300)
+                                
+//                Button("Show All Cards") {
+//                    isShowAllCards = true
+//                }
                 
                 VStack {
                     HStack {
@@ -123,7 +130,7 @@ struct HomeView: View {
                                 .foregroundColor(Color.grayExtra)
                         }
                     }
-                    .padding(.top, 30)
+//                    .padding(.top, 30)
                     .padding(.leading, 20)
                     .padding(.trailing, 20)
                     

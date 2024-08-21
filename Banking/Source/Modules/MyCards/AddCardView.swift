@@ -46,7 +46,7 @@ struct AddCardView: View {
             .padding(.leading, 20)
             .padding(.trailing, 20)
             
-            CardWidget(pan: $cardNumber,
+            AddCardWidget(pan: $cardNumber,
                        cvv: $cvv,
                        cardHolder: $cardHolderName,
                        expDate: $expiryDate,

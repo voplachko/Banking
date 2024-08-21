@@ -126,7 +126,9 @@ struct ProfileView: View {
         .frame(maxWidth: .infinity)
         .background(Color.bankingPrimary)
         .ignoresSafeArea(.all)
+        .navigationBarBackButtonHidden(true)
     }
+    
 }
 
 #Preview {
