@@ -102,20 +102,23 @@ struct SettingsView: View {
                 Divider()
                     .padding(.horizontal, 20)
                 
-                HStack {
-                    Text("Contact Us")
-                        .font(.custom("Poppins", size: 14))
-                        .fontWeight(.medium)
-                        .foregroundColor(.white)
+                NavigationLink(destination: ContactUsView()) {
+                    HStack {
+                        Text("Contact Us")
+                            .font(.custom("Poppins", size: 14))
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                        
+                        Spacer()
+                        
+                        Image(systemName: "chevron.right")
+                            .resizable()
+                            .frame(width: 10, height: 15)
+                            .foregroundColor(.grayExtra)
+                    }
+                    .padding(.horizontal, 20)
                     
-                    Spacer()
-                    
-                    Image(systemName: "chevron.right")
-                        .resizable()
-                        .frame(width: 10, height: 15)
-                        .foregroundColor(.grayExtra)
                 }
-                .padding(.horizontal, 20)
                 
                 Divider()
                     .padding(.horizontal, 20)
@@ -257,6 +260,53 @@ struct LanguageSelectionView: View {
 //        .navigationTitle("Select Language")
         .listStyle(PlainListStyle())
     }
+}
+
+struct ContactUsView: View {
+    
+    @Environment(\.dismiss) private var dismiss
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Button(action:  {
+                    dismiss()
+                }) {
+                    Image("Back_Icon")
+                        .frame(width: 42, height: 42)
+                        .padding(.leading, 20)
+                }
+                
+                Spacer()
+                                
+                Text("Contact Us")
+                    .font(.custom("Poppins", size: 18))
+                    .fontWeight(.medium)
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                Image("Edit-Icon")
+                    .frame(width: 42, height: 42)
+                    .padding(.trailing, 20)
+                    .opacity(0)
+                
+                
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.top, safeAreaInsets().top)
+            
+            
+            
+            Spacer()
+            
+        }
+        .frame(maxWidth: .infinity)
+        .background(Color.bankingPrimary)
+        .ignoresSafeArea(.all)
+        .navigationBarBackButtonHidden(true)
+    }
+        
 }
 
 #Preview {
